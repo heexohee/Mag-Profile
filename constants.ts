@@ -12,9 +12,9 @@ export const UI_TEXT = {
       certifications: 'Certifications',
     },
     hero: {
-      title1: 'SoHee Jeong',
-      title2: 'Creative Developer',
-      subtitle: 'A creative developer and designer crafting elegant digital experiences from Seoul, South Korea.',
+      title: 'SoHee Jeong',
+      subtitleLeft: 'A developer who speaks the language of design.',
+      subtitleRight: 'Crafting intuitive interfaces and meaningful digital narratives. Based in Seoul, my work is a fusion of clean code, minimalist aesthetics, and user-centric philosophy.',
       scroll: 'SCROLL',
     },
     about: {
@@ -61,10 +61,10 @@ export const UI_TEXT = {
       certifications: 'Certifications',
     },
     hero: {
-      title1: '정소희',
-      title2: 'Creative Developer',
-      subtitle: '서울을 기반으로 활동하며 우아한 디지털 경험을 만드는 크리에이티브 개발자이자 디자이너입니다.',
-      scroll: '스크롤',
+      title: '정소희',
+      subtitleLeft: '디자인의 언어로 말하는 개발자.',
+      subtitleRight: '직관적인 인터페이스와 의미 있는 디지털 내러티브를 만듭니다. 서울을 기반으로 활동하며, 깨끗한 코드와 미니멀한 미학, 그리고 사용자 중심 철학의 융합을 추구합니다.',
+      scroll: 'SCROLL',
     },
     about: {
       title: 'About Me',
@@ -82,7 +82,7 @@ export const UI_TEXT = {
       title: 'Projects',
     },
     personalProjects: {
-      title: 'Personal Projects',
+      title: 'Projects',
     },
     skills: {
       title: 'Expertise',
@@ -189,9 +189,9 @@ const PERSONAL_PROJECTS_EN: Project[] = [
   {
     id: 5,
     year: "2023",
-    category: "Web App",
-    title: "Portfolio Website",
-    description: "This very portfolio, built with React, TypeScript, and Tailwind CSS to showcase my skills in a modern, aesthetic way.",
+    category: "Design",
+    title: "동빈문화공간 사이니지 워크숍",
+    description: "복합 문화 공간 사이니지 워크숍 참여 및 제작",
     imageUrl: "https://picsum.photos/seed/portfolio/800/600?grayscale",
   },
   {
