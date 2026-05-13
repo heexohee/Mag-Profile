@@ -5,7 +5,7 @@ import { UI_TEXT } from '../constants';
 const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const { language, toggleLanguage } = useLanguage();
 
   const navItems = [
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const storedTheme = localStorage.getItem('theme');
 
-      const shouldBeDark = storedTheme === 'dark' || (!storedTheme && isSystemDark);
+      const shouldBeDark = storedTheme === 'dark';
       setIsDark(shouldBeDark);
 
       if (shouldBeDark) {

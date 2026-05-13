@@ -62,7 +62,7 @@ export const UI_TEXT = {
     },
     hero: {
       title: '정소희',
-      subtitleLeft: '디자인의 언어로 말하는 개발자.',
+      subtitleLeft: '프롭테크 NO.1 직방에서 AX전환 프로젝트를 이끈 ',
       subtitleRight: '직관적인 인터페이스와 의미 있는 디지털 내러티브를 만듭니다. 서울을 기반으로 활동하며, 깨끗한 코드와 미니멀한 미학, 그리고 사용자 중심 철학의 융합을 추구합니다.',
       scroll: 'SCROLL',
     },
@@ -108,6 +108,11 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  projectDescription?: string;
+  myRole?: string;
+  contribution?: string;
+  results?: string;
+  detailImageUrls?: string[];
 }
 
 const WORK_EXPERIENCE_EN: Project[] = [
@@ -118,6 +123,15 @@ const WORK_EXPERIENCE_EN: Project[] = [
     title: "Zigbang",
     description: "A comprehensive rebranding for a leading tech startup, focusing on minimalist aesthetics and digital presence.",
     imageUrl: "https://picsum.photos/seed/alpha/800/600?grayscale",
+    projectDescription: "An AX (AI Transformation) project aimed at redesigning the legacy system to create a brand new user-centric experience.",
+    myRole: "As the lead designer, I was responsible for rebuilding the design system and the overall UI/UX design.",
+    contribution: "100% (Led design strategy, prototyping, and usability testing)",
+    results: "Achieved a 30% increase in conversion rates through data-driven decisions and secured positive feedback in user satisfaction surveys.",
+    detailImageUrls: [
+      "https://picsum.photos/seed/z1/1200/800?grayscale",
+      "https://picsum.photos/seed/z2/800/1000?grayscale",
+      "https://picsum.photos/seed/z3/1000/600?grayscale"
+    ]
   },
   {
     id: 2,
@@ -148,11 +162,20 @@ const WORK_EXPERIENCE_EN: Project[] = [
 const WORK_EXPERIENCE_KO: Project[] = [
   {
     id: 1,
-    year: "2025",
-    category: "브랜딩",
-    title: "직방",
-    description: "미니멀한 미학과 디지털 존재감에 초점을 맞춘 선도적인 기술 스타트업을 위한 포괄적인 리브랜딩.",
+    year: "2026",
+    category: "전사 AX전환 프로젝트 리딩",
+    title: "직방 ZIGBANG",
+    description: "프롭테크 기업 직방의 전사 서비스 AX 전환 프로젝트에 참여.",
     imageUrl: "https://picsum.photos/seed/alpha/800/600?grayscale",
+    projectDescription: "기존 레거시 시스템을 혁신하고 사용자 중심의 새로운 경험을 설계하는 것을 목표로 한 AX(AI Transformation) 전환 프로젝트입니다. 비개발자도 사용할 수 있는 GUI 기반 자동화 툴 'Zapier'를 메뉴얼 제작에서 생성형 AI를 활용한 4컷 만화를 삽입하여 구성원들의 초기 진입 허들을 낮추고 재미있는 콘텐츠로 몰입감을,,,",
+    myRole: "리드 디자이너로서 디자인 시스템 재구축 및 전반적인 UI/UX 설계를 담당했습니다.만화를 그림 어떤 문제를 해결하려는 자동화 프로젝트 인지 ",
+    contribution: "100% (디자인 전략 수립, 프로토타이핑, 사용성 테스트 등 리드)",
+    results: "데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다. 데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.",
+    detailImageUrls: [
+      "https://picsum.photos/seed/z1/1200/800?grayscale",
+      "https://picsum.photos/seed/z2/800/1000?grayscale",
+      "https://picsum.photos/seed/z3/1000/600?grayscale"
+    ]
   },
   {
     id: 2,
@@ -161,6 +184,15 @@ const WORK_EXPERIENCE_KO: Project[] = [
     title: "E-commerce Platform",
     description: "하이엔드 패션 이커머스 웹사이트를 위한 매끄럽고 직관적인 사용자 경험 디자인.",
     imageUrl: "https://picsum.photos/seed/ecommerce/800/600?grayscale",
+    projectDescription: "프리미엄 패션 브랜드의 시각적 스토리텔링과 사용자 여정을 강화하기 위한 디지털 스토어 전면 개편 프로젝트입니다. 다수의 상품을 직관적으로 탐색할 수 있도록 돕는 카테고리 분류와 매끄러운 결제 경험을 제공하여 초기 진입 허들을 낮추고 재미있는 콘텐츠로 몰입감을,,,",
+    myRole: "리드 UX/UI 디자이너로서 유저 플로우 설계, 와이어프레임 및 하이파이(High-Fidelity) 목업 제작을 주도했습니다. 구매 전환율을 높이기 위해 어떤 문제를 해결하려는 디자인 리뉴얼 프로젝트 인지 ",
+    contribution: "100% (UI 디자인, 인터랙티브 프로토타이핑, 타 부서와의 협업 리드)",
+    results: "평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다. 평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.",
+    detailImageUrls: [
+      "https://picsum.photos/seed/e1/800/800?grayscale",
+      "https://picsum.photos/seed/e2/800/800?grayscale",
+      "https://picsum.photos/seed/e3/800/800?grayscale"
+    ]
   },
   {
     id: 3,
@@ -169,6 +201,15 @@ const WORK_EXPERIENCE_KO: Project[] = [
     title: "The Urbanist Magazine",
     description: "현대 건축과 도시 생활에 관한 월간 간행물의 아트 디렉션 및 레이아웃 디자인.",
     imageUrl: "https://picsum.photos/seed/urbanist/800/600?grayscale",
+    projectDescription: "미니멀한 타이포그래피와 감각적인 사진을 통해 현대 도시의 본질을 담아내는 인쇄 및 디지털 에디토리얼 프로젝트입니다. 복잡한 도시 생활의 인사이트를 직관적인 레이아웃과 흥미로운 아티클로 풀어내어 독자들의 초기 진입 허들을 낮추고 재미있는 콘텐츠로 몰입감을,,,",
+    myRole: "아트 디렉터로서 전체적인 시각적 콘셉트와 그리드 시스템을 기획하고 디자인했습니다. 타이포그래피를 통해 어떤 문제를 해결하려는 에디토리얼 프로젝트 인지 ",
+    contribution: "100% (아트 디렉션, 레이아웃 디자인, 인쇄 제작 감리)",
+    results: "12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다. 12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.",
+    detailImageUrls: [
+      "https://picsum.photos/seed/u1/800/800?grayscale",
+      "https://picsum.photos/seed/u2/800/800?grayscale",
+      "https://picsum.photos/seed/u3/800/800?grayscale"
+    ]
   },
   {
     id: 4,
@@ -177,6 +218,15 @@ const WORK_EXPERIENCE_KO: Project[] = [
     title: "Mobile Banking App",
     description: "차세대 모바일 뱅킹 애플리케이션을 위한 안전하고 사용자 친화적인 인터페이스 제작.",
     imageUrl: "https://picsum.photos/seed/banking/800/600?grayscale",
+    projectDescription: "복잡한 금융 거래를 안전하고 쉽고 직관적으로 느낄 수 있도록 레거시 모바일 뱅킹 앱을 리디자인하는 프로젝트입니다. 비대면 금융 서비스에 익숙하지 않은 사용자들을 위해 직관적인 인터랙션과 안내 화면을 삽입하여 사용자들의 초기 진입 허들을 낮추고 편리한 금융 서비스 경험을 제공하여 몰입감을,,,",
+    myRole: "프로덕트 디자이너로서 사용자 리서치를 수행하고 End-to-End 유저 플로우를 설계했습니다. 금융의 복잡성을 어떻게 줄이고 어떤 문제를 해결하려는 앱 리뉴얼 프로젝트 인지 ",
+    contribution: "100% (사용자 리서치, 인터랙션 디자인, 디자인 시스템 연동)",
+    results: "앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다. 앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.",
+    detailImageUrls: [
+      "https://picsum.photos/seed/b1/800/800?grayscale",
+      "https://picsum.photos/seed/b2/800/800?grayscale",
+      "https://picsum.photos/seed/b3/800/800?grayscale"
+    ]
   },
 ];
 
