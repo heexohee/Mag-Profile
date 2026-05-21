@@ -1,11 +1,16 @@
+// ====================================================================
+//  정소희 Portfolio — constants.ts (Updated 2026-05-21)
+//  AI / Automation Specialist Positioning
+//  이 파일을 기존 constants.ts와 교체하세요.
+// ====================================================================
 
-// UI Translations
+// ---------- UI Translations ----------
 export const UI_TEXT = {
   en: {
     nav: {
-      about: 'About Me',
+      about: 'About',
       education: 'Education',
-      workExperience: 'Work Experience',
+      workExperience: 'Work',
       personalProjects: 'Projects',
       expertise: 'Expertise',
       awards: 'Awards',
@@ -13,27 +18,28 @@ export const UI_TEXT = {
     },
     hero: {
       title: 'SoHee Jeong',
-      subtitleLeft: 'A developer who speaks the language of design.',
-      subtitleRight: 'Crafting intuitive interfaces and meaningful digital narratives. Based in Seoul, my work is a fusion of clean code, minimalist aesthetics, and user-centric philosophy.',
+      subtitleLeft: 'Turning vague AX into tangible experience.',
+      subtitleRight:
+        'AI · Automation Specialist based in Seoul. I translate technology into people-friendly language, and turn people’s problems into systems. Currently building internal AX and automation at Zigbang.',
       scroll: 'SCROLL',
     },
     about: {
       title: 'About Me',
-      p1: 'I am a multi-disciplinary creative with a focus on crafting elegant and effective solutions for the digital world. With a background in both design and front-end development, I bridge the gap between aesthetics and functionality. My approach is rooted in a deep appreciation for minimalism, typography, and user-centric design principles.',
-      p2: 'Over the years, I have collaborated with startups and established brands to build engaging websites, robust applications, and memorable brand identities. I believe great design is not just about looking good, but about solving problems and creating intuitive experiences that resonate with people.',
+      p1: 'I started in sculpture, learning to read space, form, and the way a viewer’s body moves through them. Through a data analysis certificate, a front-end bootcamp, and Apple Developer Academy, I gradually moved into building digital experiences — but kept the sculptor’s instincts: how does this *feel* to the person standing in front of it?',
+      p2: 'Today I work as Internal Product Ops at Zigbang, leading the company-wide AX (AI Transformation) initiative and building automation systems that quietly remove friction from people’s work. I believe the best automation is invisible, and the best technology is one your team forgets is technology at all.',
     },
     education: {
       title: 'Education',
     },
     workExperience: {
-      title: 'Work Experience',
-      period: '2025 – 2026', // Update dynamic date if needed
+      title: 'Work',
+      period: '2025 – Present',
     },
     projects: {
-      title: 'Projects',
+      title: 'Work',
     },
     personalProjects: {
-      title: 'Projects',
+      title: 'Personal Projects',
     },
     skills: {
       title: 'Expertise',
@@ -46,15 +52,15 @@ export const UI_TEXT = {
     },
     contact: {
       title: 'Get in Touch',
-      p1: 'I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.',
+      p1: 'Open to new opportunities, collaborations, and conversations about automation, AX, and the space where art meets technology.',
       email: 'Email me',
-    }
+    },
   },
   ko: {
     nav: {
-      about: 'About Me',
+      about: 'About',
       education: 'Education',
-      workExperience: 'Work Experience',
+      workExperience: 'Work',
       personalProjects: 'Projects',
       expertise: 'Expertise',
       awards: 'Awards',
@@ -62,27 +68,28 @@ export const UI_TEXT = {
     },
     hero: {
       title: '정소희',
-      subtitleLeft: '프롭테크 NO.1 직방에서 AX전환 프로젝트를 이끈 ',
-      subtitleRight: '직관적인 인터페이스와 의미 있는 디지털 내러티브를 만듭니다. 서울을 기반으로 활동하며, 깨끗한 코드와 미니멀한 미학, 그리고 사용자 중심 철학의 융합을 추구합니다.',
+      subtitleLeft: '막연한 AX를 손에 잡히는 ‘경험’으로 만듭니다.',
+      subtitleRight:
+        '서울에서 활동하는 AI·Automation Specialist입니다. 기술을 사람의 언어로 번역하고, 사람의 문제를 시스템으로 풀어냅니다. 지금은 직방 Internal Product 팀에서 전사 AX 전환과 사내 자동화를 만들고 있습니다.',
       scroll: 'SCROLL',
     },
     about: {
       title: 'About Me',
-      p1: '저는 디지털 세상을 위한 우아하고 효과적인 솔루션을 만드는 데 중점을 둔 다학제적 크리에이터입니다. 디자인과 프론트엔드 개발에 대한 배경지식을 바탕으로 심미성과 기능성 사이의 간극을 좁힙니다. 저의 접근 방식은 미니멀리즘, 타이포그래피, 그리고 사용자 중심 디자인 원칙에 깊은 뿌리를 두고 있습니다.',
-      p2: '수년 동안 스타트업 및 기존 브랜드와 협력하여 매력적인 웹사이트, 견고한 애플리케이션, 기억에 남는 브랜드 아이덴티티를 구축해 왔습니다. 훌륭한 디자인은 단순히 보기 좋은 것이 아니라, 문제를 해결하고 사람들의 공감을 불러일으키는 직관적인 경험을 창조하는 것이라 믿습니다.',
+      p1: '저는 홍익대학교에서 조소(彫塑)를 전공했습니다. 4년간 공간·형태·관람자의 동선을 다루며, “이 작업이 사람에게 어떻게 닿는가”를 묻는 훈련을 받았습니다. 졸업 후 데이터 분석 자격증(ADsP), 이노베이션 개발자 부트캠프(JS/React), 애플 디벨로퍼 아카데미 @POSTECH을 거치며 디지털 경험을 직접 만드는 영역으로 옮겨 왔습니다.',
+      p2: '지금은 직방 Internal Product 팀에서 전사 AX(AI Transformation) 전환과 사내 자동화 시스템을 만들고 있습니다. 비개발 직군 동료들이 AI를 막연한 것이 아니라 일상의 도구로 받아들이게 하는 일, 반복 업무 뒤에 숨은 비효율을 시스템으로 걷어내는 일을 합니다. 가장 좋은 자동화는 사용자가 그 존재를 의식하지 않는 자동화라고 믿습니다.',
     },
     education: {
       title: 'Education',
     },
     workExperience: {
-      title: 'Work Experience',
-      period: '2025 – 2026',
+      title: 'Work',
+      period: '2025 – 현재',
     },
     projects: {
-      title: 'Projects',
+      title: 'Work',
     },
     personalProjects: {
-      title: 'Projects',
+      title: 'Personal Projects',
     },
     skills: {
       title: 'Expertise',
@@ -95,12 +102,13 @@ export const UI_TEXT = {
     },
     contact: {
       title: 'Get in Touch',
-      p1: 'I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.',
+      p1: '새로운 기회, 협업, 그리고 자동화·AX·예술과 기술의 교차점에 대한 대화를 언제든 환영합니다.',
       email: 'Email me',
-    }
-  }
+    },
+  },
 };
 
+// ---------- Types ----------
 export interface Project {
   id: number;
   year: string;
@@ -115,169 +123,196 @@ export interface Project {
   detailImageUrls?: string[];
 }
 
+// ---------- Work Experience (실제 직방 프로젝트 3종) ----------
 const WORK_EXPERIENCE_EN: Project[] = [
   {
     id: 1,
-    year: "2025",
-    category: "Branding",
-    title: "Zigbang",
-    description: "A comprehensive rebranding for a leading tech startup, focusing on minimalist aesthetics and digital presence.",
-    imageUrl: "https://picsum.photos/seed/alpha/800/600?grayscale",
-    projectDescription: "An AX (AI Transformation) project aimed at redesigning the legacy system to create a brand new user-centric experience.",
-    myRole: "As the lead designer, I was responsible for rebuilding the design system and the overall UI/UX design.",
-    contribution: "100% (Led design strategy, prototyping, and usability testing)",
-    results: "Achieved a 30% increase in conversion rates through data-driven decisions and secured positive feedback in user satisfaction surveys.",
+    year: '2025 – 2026',
+    category: 'Company-wide AX Transformation',
+    title: 'Zigbang AX Transformation',
+    description:
+      'A 4-stage AX learning journey (Zapier → Slack → GAS → Claude) that reached 82% completion across the company.',
+    imageUrl: 'https://picsum.photos/seed/ax/800/600?grayscale',
+    projectDescription:
+      'A company-wide AI Transformation initiative at Zigbang, designed to make automation and LLM tools part of every employee’s daily workflow — from non-developers to engineers. I planned and operated a 4-stage curriculum (Zapier · Slack · Google Apps Script · Claude) and produced immersive communication content to lower the psychological barrier of adopting new tools.',
+    myRole:
+      'Internal Product Ops — I led the change management side: designing the learning roadmap, creating generative-AI webtoons to explain each tool in human language, and managing rollout across the company.',
+    contribution:
+      'Curriculum design, content production (AI-generated webtoons), facilitation, and outcome tracking.',
+    results:
+      '82% of all employees completed the full program. Qualitative feedback: “AI and automation used to feel abstract — the webtoons and step-by-step guides gave me the courage to actually try it in my own work.” Beyond the numbers, the project established a culture where employees voluntarily audit and improve their own workflows.',
     detailImageUrls: [
-      "https://picsum.photos/seed/z1/1200/800?grayscale",
-      "https://picsum.photos/seed/z2/800/1000?grayscale",
-      "https://picsum.photos/seed/z3/1000/600?grayscale"
-    ]
+      'https://picsum.photos/seed/ax1/1200/800?grayscale',
+      'https://picsum.photos/seed/ax2/800/1000?grayscale',
+      'https://picsum.photos/seed/ax3/1000/600?grayscale',
+    ],
   },
   {
     id: 2,
-    year: "2023",
-    category: "Web Design",
-    title: "E-commerce Platform",
-    description: "Designed a seamless and intuitive user experience for a high-end fashion e-commerce website.",
-    imageUrl: "https://picsum.photos/seed/ecommerce/800/600?grayscale",
+    year: '2026 – Present',
+    category: 'Internal System Design',
+    title: 'Zigbang Automation Request Bot',
+    description:
+      'An End-to-End Slack bot pipeline that standardized how teams request, approve, and ship internal automation.',
+    imageUrl: 'https://picsum.photos/seed/slackbot/800/600?grayscale',
+    projectDescription:
+      'Before this system, internal automation requests came in through email and DMs — no standard form, no manager approval, no record. I designed a Slack-based pipeline that handles the full lifecycle: request → manager approval → IP team review → development. Each approved request auto-creates a dedicated collaboration channel with the right people already invited.',
+    myRole:
+      'End-to-end design and implementation: process design, Slack Block Kit UX, serverless logic on AWS Lambda, and DynamoDB schema for request history.',
+    contribution:
+      'Process design · UX · Backend logic · Database schema · Rollout.',
+    results:
+      '12+ automation requests captured and tracked as structured data since March 2026, making internal bottlenecks visible for the first time. Lead time from request to kickoff dropped significantly thanks to auto-channel creation. Governance established: managers now approve before IP team touches anything.',
+    detailImageUrls: [
+      'https://picsum.photos/seed/bot1/1200/800?grayscale',
+      'https://picsum.photos/seed/bot2/800/1000?grayscale',
+      'https://picsum.photos/seed/bot3/1000/600?grayscale',
+    ],
   },
   {
     id: 3,
-    year: "2022",
-    category: "Editorial Design",
-    title: "The Urbanist Magazine",
-    description: "Art direction and layout design for a monthly publication on modern architecture and urban living.",
-    imageUrl: "https://picsum.photos/seed/urbanist/800/600?grayscale",
-  },
-  {
-    id: 4,
-    year: "2022",
-    category: "UI/UX",
-    title: "Mobile Banking App",
-    description: "Crafted a secure and user-friendly interface for a next-generation mobile banking application.",
-    imageUrl: "https://picsum.photos/seed/banking/800/600?grayscale",
+    year: '2026 – Present',
+    category: 'Data Pipeline Automation',
+    title: 'ADS Team — Notion-to-Sheets Pipeline',
+    description:
+      'A fully automated pipeline that extracts client-specific advertising data from Notion into formatted Google Sheets in under 10 seconds.',
+    imageUrl: 'https://picsum.photos/seed/ads/800/600?grayscale',
+    projectDescription:
+      'The ADS team manually filtered and copy-pasted client data from a large Notion database into shared spreadsheets — a process prone to human error and slow enough to delay ad-buying decisions. I designed an automated pipeline using the Notion API and Google Apps Script that pulls, cleans, and routes data to per-client sheets in real time.',
+    myRole:
+      'Pipeline design and implementation: Notion API integration, GAS-based transformation logic, scheduling, and error handling.',
+    contribution: 'Architecture · GAS development · Data validation logic · Operational handoff.',
+    results:
+      'Human error rate dropped to 0%. Extraction time per request reduced to ~10 seconds. The freed-up operational time was redirected to higher-value work like ad performance analysis and strategy.',
+    detailImageUrls: [
+      'https://picsum.photos/seed/ads1/1200/800?grayscale',
+      'https://picsum.photos/seed/ads2/800/1000?grayscale',
+      'https://picsum.photos/seed/ads3/1000/600?grayscale',
+    ],
   },
 ];
 
 const WORK_EXPERIENCE_KO: Project[] = [
   {
     id: 1,
-    year: "2026",
-    category: "전사 AX전환 프로젝트 리딩",
-    title: "직방 ZIGBANG",
-    description: "프롭테크 기업 직방의 전사 서비스 AX 전환 프로젝트에 참여.",
-    imageUrl: "https://picsum.photos/seed/alpha/800/600?grayscale",
-    projectDescription: "기존 레거시 시스템을 혁신하고 사용자 중심의 새로운 경험을 설계하는 것을 목표로 한 AX(AI Transformation) 전환 프로젝트입니다. 비개발자도 사용할 수 있는 GUI 기반 자동화 툴 'Zapier'를 메뉴얼 제작에서 생성형 AI를 활용한 4컷 만화를 삽입하여 구성원들의 초기 진입 허들을 낮추고 재미있는 콘텐츠로 몰입감을,,,",
-    myRole: "리드 디자이너로서 디자인 시스템 재구축 및 전반적인 UI/UX 설계를 담당했습니다.만화를 그림 어떤 문제를 해결하려는 자동화 프로젝트 인지 ",
-    contribution: "100% (디자인 전략 수립, 프로토타이핑, 사용성 테스트 등 리드)",
-    results: "데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다. 데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.데이터 기반의 의사결정을 통해 전환율을 30% 이상 향상시켰으며, 사용자 만족도 조사에서 긍정적인 피드백을 확보했습니다.",
+    year: '2025 – 2026',
+    category: '전사 AX 전환',
+    title: '직방 전사 AX 전환 프로젝트',
+    description:
+      'Zapier · Slack · GAS · Claude로 이어지는 4단계 AX 로드맵을 기획·운영해 전체 구성원의 82% 수료를 달성한 프로젝트.',
+    imageUrl: 'https://picsum.photos/seed/ax/800/600?grayscale',
+    projectDescription:
+      '직방 전사 구성원이 AI와 자동화를 일상의 도구로 받아들이게 하는 것을 목표로 한 AX(AI Transformation) 전환 프로젝트입니다. 비개발 직군부터 개발자까지 모두 따라올 수 있도록 No-code 도구(Zapier)부터 LLM(Claude)까지 4단계 커리큘럼을 설계했고, 신규 툴에 대한 심리적 허들을 낮추기 위해 생성형 AI로 제작한 만화(Webtoon)를 홍보·교육 콘텐츠로 도입했습니다.',
+    myRole:
+      'Internal Product Ops 역할로 프로젝트의 변화 관리(Change Management) 측면을 리드했습니다. 4단계 커리큘럼 설계, 생성형 AI 만화 콘텐츠 기획·제작, 전사 롤아웃 운영, 성과 측정까지 담당했습니다.',
+    contribution: '커리큘럼 설계 · AI 만화 콘텐츠 기획·제작 · 전사 운영 · 성과 분석.',
+    results:
+      '전체 구성원의 82%가 프로젝트 전 과정을 수료. 정성적 피드백: “AI와 자동화가 막연히 어렵게 느껴졌는데, 만화와 단계별 가이드를 통해 실무에 바로 적용해 볼 용기가 생겼다.” 단순 교육을 넘어, 구성원 스스로 자신의 업무 파이프라인을 점검하고 개선하는 자생적 AX 문화가 자리잡았습니다.',
     detailImageUrls: [
-      "https://picsum.photos/seed/z1/1200/800?grayscale",
-      "https://picsum.photos/seed/z2/800/1000?grayscale",
-      "https://picsum.photos/seed/z3/1000/600?grayscale"
-    ]
+      'https://picsum.photos/seed/ax1/1200/800?grayscale',
+      'https://picsum.photos/seed/ax2/800/1000?grayscale',
+      'https://picsum.photos/seed/ax3/1000/600?grayscale',
+    ],
   },
   {
     id: 2,
-    year: "2023",
-    category: "웹 디자인",
-    title: "E-commerce Platform",
-    description: "하이엔드 패션 이커머스 웹사이트를 위한 매끄럽고 직관적인 사용자 경험 디자인.",
-    imageUrl: "https://picsum.photos/seed/ecommerce/800/600?grayscale",
-    projectDescription: "프리미엄 패션 브랜드의 시각적 스토리텔링과 사용자 여정을 강화하기 위한 디지털 스토어 전면 개편 프로젝트입니다. 다수의 상품을 직관적으로 탐색할 수 있도록 돕는 카테고리 분류와 매끄러운 결제 경험을 제공하여 초기 진입 허들을 낮추고 재미있는 콘텐츠로 몰입감을,,,",
-    myRole: "리드 UX/UI 디자이너로서 유저 플로우 설계, 와이어프레임 및 하이파이(High-Fidelity) 목업 제작을 주도했습니다. 구매 전환율을 높이기 위해 어떤 문제를 해결하려는 디자인 리뉴얼 프로젝트 인지 ",
-    contribution: "100% (UI 디자인, 인터랙티브 프로토타이핑, 타 부서와의 협업 리드)",
-    results: "평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다. 평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.평균 세션 시간이 45% 증가하였으며, 장바구니 이탈률을 20% 감소시키는 성과를 거두었습니다.",
+    year: '2026 – 현재',
+    category: '사내 시스템 설계',
+    title: '직방 사내 자동화 요청 슬랙 봇',
+    description:
+      '비정형 자동화 요청을 표준화한 End-to-End 슬랙 봇 시스템. 요청 → 승인 → 검토 → 개발의 4단계 워크플로우를 자동화했습니다.',
+    imageUrl: 'https://picsum.photos/seed/slackbot/800/600?grayscale',
+    projectDescription:
+      '기존에는 자동화 요청이 이메일과 개인 DM으로 비공식적으로 들어와 히스토리 추적도, 부서장 승인도, 우선순위 관리도 불가능했습니다. 이를 해결하기 위해 슬랙 봇 기반으로 요청-승인-검토-개발의 전 과정을 시스템화했고, 승인 즉시 관련 인원이 자동 초대된 협업 채널이 생성되도록 설계했습니다.',
+    myRole:
+      'End-to-end로 직접 설계·구현했습니다. 운영 프로세스 설계, Slack Block Kit 기반 인터랙티브 UX, AWS Lambda Serverless 로직, DynamoDB 스키마 설계까지 담당했습니다.',
+    contribution:
+      '프로세스 설계 · Slack UX · AWS Lambda 로직 · DynamoDB 스키마 · 롤아웃.',
+    results:
+      '2026년 3월 이후 누적 12건 이상의 자동화 요청이 구조화된 데이터로 축적되어, 사내 업무 병목 구간이 처음으로 가시화되었습니다. 채널 자동 생성으로 초기 협의 리드타임이 크게 단축되었고, “팀장 승인 → IP팀 검토”라는 공식 거버넌스가 자리잡아 무분별한 요청이 사라졌습니다.',
     detailImageUrls: [
-      "https://picsum.photos/seed/e1/800/800?grayscale",
-      "https://picsum.photos/seed/e2/800/800?grayscale",
-      "https://picsum.photos/seed/e3/800/800?grayscale"
-    ]
+      'https://picsum.photos/seed/bot1/1200/800?grayscale',
+      'https://picsum.photos/seed/bot2/800/1000?grayscale',
+      'https://picsum.photos/seed/bot3/1000/600?grayscale',
+    ],
   },
   {
     id: 3,
-    year: "2022",
-    category: "편집 디자인",
-    title: "The Urbanist Magazine",
-    description: "현대 건축과 도시 생활에 관한 월간 간행물의 아트 디렉션 및 레이아웃 디자인.",
-    imageUrl: "https://picsum.photos/seed/urbanist/800/600?grayscale",
-    projectDescription: "미니멀한 타이포그래피와 감각적인 사진을 통해 현대 도시의 본질을 담아내는 인쇄 및 디지털 에디토리얼 프로젝트입니다. 복잡한 도시 생활의 인사이트를 직관적인 레이아웃과 흥미로운 아티클로 풀어내어 독자들의 초기 진입 허들을 낮추고 재미있는 콘텐츠로 몰입감을,,,",
-    myRole: "아트 디렉터로서 전체적인 시각적 콘셉트와 그리드 시스템을 기획하고 디자인했습니다. 타이포그래피를 통해 어떤 문제를 해결하려는 에디토리얼 프로젝트 인지 ",
-    contribution: "100% (아트 디렉션, 레이아웃 디자인, 인쇄 제작 감리)",
-    results: "12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다. 12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.12개의 월간 호를 성공적으로 발행하였으며, 내셔널 디자인 어워드에서 '베스트 에디토리얼 디자인' 상을 수상했습니다.",
+    year: '2026 – 현재',
+    category: '데이터 파이프라인 자동화',
+    title: 'ADS팀 거래처 데이터 추출 자동화',
+    description:
+      '노션 DB의 거래처별 광고사 데이터를 구글 시트로 10초 안에 추출·정렬하는 자동화 파이프라인.',
+    imageUrl: 'https://picsum.photos/seed/ads/800/600?grayscale',
+    projectDescription:
+      'ADS팀은 노션에 보관된 방대한 거래처·광고사 데이터를 매번 수동으로 필터링·복사해 공유 시트로 옮기고 있었습니다. 휴먼 에러가 발생하기 쉽고, 광고 집행 의사결정을 지연시키는 원인이 되었습니다. 이를 해결하기 위해 Notion API와 Google Apps Script(GAS)를 연동한 자동 추출 파이프라인을 설계·구축했습니다.',
+    myRole:
+      'Notion API 호출 로직 설계, GAS 기반 데이터 전처리·분류 로직 구현, 스케줄링 설정, 에러 핸들링까지 직접 담당했습니다.',
+    contribution: '아키텍처 설계 · GAS 개발 · 데이터 정합성 검증 로직 · 운영 인수인계.',
+    results:
+      '휴먼 에러 0%로 데이터 정합성을 확보했고, 거래처별 데이터 추출 시간을 10초 내외로 단축했습니다. 확보된 리소스는 단순 추출 대신 광고 효율 분석·전략 수립 같은 고부가가치 업무로 재배치되었습니다.',
     detailImageUrls: [
-      "https://picsum.photos/seed/u1/800/800?grayscale",
-      "https://picsum.photos/seed/u2/800/800?grayscale",
-      "https://picsum.photos/seed/u3/800/800?grayscale"
-    ]
-  },
-  {
-    id: 4,
-    year: "2022",
-    category: "UI/UX",
-    title: "Mobile Banking App",
-    description: "차세대 모바일 뱅킹 애플리케이션을 위한 안전하고 사용자 친화적인 인터페이스 제작.",
-    imageUrl: "https://picsum.photos/seed/banking/800/600?grayscale",
-    projectDescription: "복잡한 금융 거래를 안전하고 쉽고 직관적으로 느낄 수 있도록 레거시 모바일 뱅킹 앱을 리디자인하는 프로젝트입니다. 비대면 금융 서비스에 익숙하지 않은 사용자들을 위해 직관적인 인터랙션과 안내 화면을 삽입하여 사용자들의 초기 진입 허들을 낮추고 편리한 금융 서비스 경험을 제공하여 몰입감을,,,",
-    myRole: "프로덕트 디자이너로서 사용자 리서치를 수행하고 End-to-End 유저 플로우를 설계했습니다. 금융의 복잡성을 어떻게 줄이고 어떤 문제를 해결하려는 앱 리뉴얼 프로젝트 인지 ",
-    contribution: "100% (사용자 리서치, 인터랙션 디자인, 디자인 시스템 연동)",
-    results: "앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다. 앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.앱 스토어 평점이 3.2에서 4.8로 상승하였고, 일간 활성 사용자(DAU)가 60% 증가했습니다.",
-    detailImageUrls: [
-      "https://picsum.photos/seed/b1/800/800?grayscale",
-      "https://picsum.photos/seed/b2/800/800?grayscale",
-      "https://picsum.photos/seed/b3/800/800?grayscale"
-    ]
+      'https://picsum.photos/seed/ads1/1200/800?grayscale',
+      'https://picsum.photos/seed/ads2/800/1000?grayscale',
+      'https://picsum.photos/seed/ads3/1000/600?grayscale',
+    ],
   },
 ];
 
 export const WORK_EXPERIENCE_DATA = {
   en: WORK_EXPERIENCE_EN,
-  ko: WORK_EXPERIENCE_KO
+  ko: WORK_EXPERIENCE_KO,
 };
 
+// ---------- Personal Projects ----------
 const PERSONAL_PROJECTS_EN: Project[] = [
   {
     id: 5,
-    year: "2023",
-    category: "Design",
-    title: "동빈문화공간 사이니지 워크숍",
-    description: "복합 문화 공간 사이니지 워크숍 참여 및 제작",
-    imageUrl: "https://picsum.photos/seed/portfolio/800/600?grayscale",
+    year: '2023',
+    category: 'Public Space Design',
+    title: 'Dongbin Cultural Space — Signage Workshop',
+    description:
+      'Participated in a signage design workshop for a hybrid cultural space, bridging spatial design and visual communication.',
+    imageUrl: 'https://picsum.photos/seed/dongbin/800/600?grayscale',
   },
   {
     id: 6,
-    year: "2023",
-    category: "Creative Coding",
-    title: "Generative Art Explorer",
-    description: "An interactive web-based tool for creating and exploring generative art patterns using p5.js.",
-    imageUrl: "https://picsum.photos/seed/genart/800/600?grayscale",
+    year: '2026',
+    category: 'Web · This Site',
+    title: 'Monochrome Magazine Portfolio',
+    description:
+      'This portfolio itself — built with React 19, TypeScript, Tailwind, and Three.js. A study in minimalism and the quiet authority of typography.',
+    imageUrl: 'https://picsum.photos/seed/portfolio/800/600?grayscale',
   },
 ];
 
 const PERSONAL_PROJECTS_KO: Project[] = [
   {
     id: 5,
-    year: "2023",
-    category: "웹 앱",
-    title: "포트폴리오 웹사이트",
-    description: "React, TypeScript, Tailwind CSS로 제작된 이 포트폴리오는 저의 기술을 현대적이고 심미적인 방식으로 보여줍니다.",
-    imageUrl: "https://picsum.photos/seed/portfolio/800/600?grayscale",
+    year: '2023',
+    category: '공공 공간 디자인',
+    title: '동빈문화공간 사이니지 워크숍',
+    description:
+      '복합 문화공간의 사이니지 디자인 워크숍에 참여·제작. 공간 디자인과 시각 커뮤니케이션의 접점을 다룬 작업입니다.',
+    imageUrl: 'https://picsum.photos/seed/dongbin/800/600?grayscale',
   },
   {
     id: 6,
-    year: "2023",
-    category: "크리에이티브 코딩",
-    title: "Generative Art Explorer",
-    description: "p5.js를 사용하여 생성 예술 패턴을 만들고 탐색하는 인터랙티브 웹 기반 도구입니다.",
-    imageUrl: "https://picsum.photos/seed/genart/800/600?grayscale",
+    year: '2026',
+    category: '웹 · 이 사이트',
+    title: 'Monochrome Magazine Portfolio',
+    description:
+      '지금 보고 계신 이 포트폴리오 자체입니다. React 19, TypeScript, Tailwind, Three.js로 제작. 미니멀리즘과 타이포그래피의 조용한 권위를 실험한 작업입니다.',
+    imageUrl: 'https://picsum.photos/seed/portfolio/800/600?grayscale',
   },
 ];
 
 export const PERSONAL_PROJECTS_DATA = {
   en: PERSONAL_PROJECTS_EN,
-  ko: PERSONAL_PROJECTS_KO
+  ko: PERSONAL_PROJECTS_KO,
 };
 
+// ---------- Awards ----------
 export interface Award {
   id: number;
   year: string;
@@ -286,18 +321,29 @@ export interface Award {
 }
 
 const AWARDS_EN: Award[] = [
-  { id: 1, year: "2022", title: "Webby Awards Honoree", organization: "The International Academy of Digital Arts and Sciences" },
+  {
+    id: 1,
+    year: '2022',
+    title: 'LG CNS DX Idea Contest — Honorable Mention',
+    organization: 'LG CNS',
+  },
 ];
 
 const AWARDS_KO: Award[] = [
-  { id: 1, year: "2022", title: "LG CNS DX 아이디어 공모전 입선", organization: "LG CNS DX 아이디어" },
+  {
+    id: 1,
+    year: '2022',
+    title: 'LG CNS DX 아이디어 공모전 입선',
+    organization: 'LG CNS',
+  },
 ];
 
 export const AWARDS_DATA = {
   en: AWARDS_EN,
-  ko: AWARDS_KO
+  ko: AWARDS_KO,
 };
 
+// ---------- Certifications ----------
 export interface Certification {
   id: number;
   year: string;
@@ -306,20 +352,41 @@ export interface Certification {
 }
 
 const CERTIFICATIONS_EN: Certification[] = [
-  { id: 1, year: "2023", title: "ADsP", issuer: "Amazon Web Services" },
-  { id: 2, year: "2022", title: "Google UX Design Professional Certificate", issuer: "Google" },
+  {
+    id: 1,
+    year: '2023',
+    title: 'ADsP (Advanced Data Analytics Semi-Professional)',
+    issuer: 'Korea Data Agency (KDATA)',
+  },
+  {
+    id: 2,
+    year: '2022',
+    title: 'Licensed Real Estate Agent (Republic of Korea)',
+    issuer: 'Human Resources Development Service of Korea',
+  },
 ];
 
 const CERTIFICATIONS_KO: Certification[] = [
-  { id: 1, year: "2023", title: "ADsP 데이터 분석 준전문가", issuer: "한국데이터산업진흥원 " },
-  { id: 2, year: "2022", title: "공인중개사", issuer: "한국산업인력공단" },
+  {
+    id: 1,
+    year: '2023',
+    title: 'ADsP 데이터 분석 준전문가',
+    issuer: '한국데이터산업진흥원',
+  },
+  {
+    id: 2,
+    year: '2022',
+    title: '공인중개사',
+    issuer: '한국산업인력공단',
+  },
 ];
 
 export const CERTIFICATIONS_DATA = {
   en: CERTIFICATIONS_EN,
-  ko: CERTIFICATIONS_KO
+  ko: CERTIFICATIONS_KO,
 };
 
+// ---------- Education ----------
 export interface Education {
   id: number;
   year: string;
@@ -328,37 +395,81 @@ export interface Education {
 }
 
 const EDUCATION_EN: Education[] = [
-  { id: 1, year: "2016 - 2021", degree: "Bachelor of Fine Arts in Sculpture", institution: "Hongik University" },
-  { id: 2, year: "2024", degree: "IOS Development, UIUX Design", institution: "Apple Developer Academy @POSTECH" },
+  {
+    id: 1,
+    year: '2016 – 2021',
+    degree: 'Bachelor of Fine Arts in Sculpture',
+    institution: 'Hongik University',
+  },
+  {
+    id: 2,
+    year: '2023',
+    degree: 'Front-End Development Bootcamp (JavaScript · React)',
+    institution: 'Innovation Academy',
+  },
+  {
+    id: 3,
+    year: '2024',
+    degree: 'iOS Development · UI/UX Design',
+    institution: 'Apple Developer Academy @ POSTECH (Cohort 3)',
+  },
 ];
 
 const EDUCATION_KO: Education[] = [
-  { id: 1, year: "2016 - 2021", degree: "조소과 학사", institution: "홍익대학교" },
-  { id: 2, year: "2024", degree: "iOS 개발, UI/UX 디자인", institution: "Apple Developer Academy @POSTECH" },
+  {
+    id: 1,
+    year: '2016 – 2021',
+    degree: '조소과 학사',
+    institution: '홍익대학교 미술대학',
+  },
+  {
+    id: 2,
+    year: '2023',
+    degree: '프론트엔드 개발 부트캠프 (JavaScript · React)',
+    institution: '이노베이션 아카데미',
+  },
+  {
+    id: 3,
+    year: '2024',
+    degree: 'iOS 개발 · UI/UX 디자인',
+    institution: 'Apple Developer Academy @ POSTECH (3기)',
+  },
 ];
 
 export const EDUCATION_DATA = {
   en: EDUCATION_EN,
-  ko: EDUCATION_KO
+  ko: EDUCATION_KO,
 };
 
+// ---------- Skills (AI/Automation Specialist 포지셔닝) ----------
 export const SKILLS_DATA: string[] = [
-  "Vibe Coding",
-  "UI/UX Design",
-  "Web Development",
-  "React & TypeScript",
-  "Graphic Design",
-  "Tailwind CSS",
-  "Figma",
-  "Art Direction",
-  "Frontend Architecture",
-  "SwiftUI"
+  // AI / LLM
+  'Claude · LLM Prompting',
+  'Generative AI Content (Webtoon)',
+  // Automation
+  'Zapier',
+  'Google Apps Script',
+  'AWS Lambda (Serverless)',
+  'Slack Web API & Block Kit',
+  // Data
+  'Notion API',
+  'Google Sheets API',
+  'Amazon DynamoDB',
+  'ADsP (Data Analysis)',
+  // Development
+  'React · TypeScript',
+  'SwiftUI · iOS',
+  // Creative & Soft
+  'Change Management',
+  'Visual Storytelling',
 ];
 
-// Social Media Links
+// ---------- Social Links ----------
 export const SOCIAL_LINKS = {
-  linkedin: "https://www.linkedin.com/in/%EC%86%8C%ED%9D%AC-%EC%A0%95-683a9b1aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",  // 여기에 실제 LinkedIn 주소 입력
-  instagram: "https://www.instagram.com/heesoheesohee?igsh=MWhmejFzMXVoZTAzZw%3D%3D&utm_source=qr", // 여기에 실제 Instagram 주소 입력
-  github: "https://github.com/heexohee",           // 여기에 실제 GitHub 주소 입력
-  email: "mailto:rsoy2918@gmail.com"
+  linkedin:
+    'https://www.linkedin.com/in/%EC%86%8C%ED%9D%AC-%EC%A0%95-683a9b1aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+  instagram:
+    'https://www.instagram.com/heesoheesohee?igsh=MWhmejFzMXVoZTAzZw%3D%3D&utm_source=qr',
+  github: 'https://github.com/heexohee',
+  email: 'mailto:rsoy2918@gmail.com',
 };
