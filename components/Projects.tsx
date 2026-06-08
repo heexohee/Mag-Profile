@@ -59,109 +59,81 @@ const Projects: React.FC = () => {
               </div>
             </div>
             
-            <div className="p-8 md:p-16 lg:p-24 bg-white dark:bg-neutral-900 flex flex-col gap-16 lg:gap-24">
-              
-              {/* Row 1: Overview */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                <div>
-                  <h4 className="text-sm font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3">
-                    {language === 'ko' ? 'Overview' : 'Overview'}
-                  </h4>
-                  <p className="text-lg md:text-xl leading-relaxed text-neutral-800 dark:text-neutral-200 font-light text-left break-keep whitespace-pre-wrap">
-                    {selectedProject.description}
-                  </p>
-                </div>
-                {selectedProject.detailImageUrls && selectedProject.detailImageUrls[0] && (
-                  <div className="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
-                    <img src={selectedProject.detailImageUrls[0]} alt={`${selectedProject.title} detail 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div className="p-8 md:p-16 lg:p-20 bg-white dark:bg-neutral-900">
+
+              {/* STAR Framework */}
+              <div className="space-y-10">
+
+                {/* Situation */}
+                {selectedProject.situation && (
+                  <div>
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-[10px] font-bold">S</span>
+                      {language === 'ko' ? '상황' : 'Situation'}
+                    </h4>
+                    <p className="text-base md:text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 break-keep">
+                      {selectedProject.situation}
+                    </p>
+                  </div>
+                )}
+
+                {/* Task */}
+                {selectedProject.task && (
+                  <div>
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-[10px] font-bold">T</span>
+                      {language === 'ko' ? '과제' : 'Task'}
+                    </h4>
+                    <p className="text-base md:text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 break-keep">
+                      {selectedProject.task}
+                    </p>
+                  </div>
+                )}
+
+                {/* Action */}
+                {selectedProject.action && (
+                  <div>
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-[10px] font-bold">A</span>
+                      {language === 'ko' ? '행동' : 'Action'}
+                    </h4>
+                    <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-400 whitespace-pre-wrap break-keep">
+                      {selectedProject.action}
+                    </p>
+                  </div>
+                )}
+
+                {/* Results - Highlighted */}
+                {selectedProject.results && (
+                  <div className="p-6 bg-black dark:bg-white rounded-xl">
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-600 mb-3 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-neutral-700 dark:bg-neutral-200 flex items-center justify-center text-[10px] font-bold text-white dark:text-black">R</span>
+                      {language === 'ko' ? '결과' : 'Results'}
+                    </h4>
+                    <p className="text-base leading-relaxed text-white dark:text-black whitespace-pre-wrap break-keep">
+                      {selectedProject.results}
+                    </p>
                   </div>
                 )}
               </div>
 
-              {/* Row 2: Project Description */}
-              {selectedProject.projectDescription && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                  <div>
-                    <h4 className="text-sm font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3">
-                      {language === 'ko' ? '프로젝트 설명' : 'Project Description'}
-                    </h4>
-                    <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 font-light text-left break-keep whitespace-pre-wrap">
-                      {selectedProject.projectDescription}
-                    </p>
+              {/* Image Gallery */}
+              {selectedProject.detailImageUrls && selectedProject.detailImageUrls.length > 0 && (
+                <div className="mt-12 space-y-4">
+                  <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500">
+                    {language === 'ko' ? '상세 이미지' : 'Gallery'}
+                  </h4>
+                  <div className="grid grid-cols-1 gap-4">
+                    {selectedProject.detailImageUrls.map((url, i) => (
+                      <div key={i} className="w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800">
+                        <img
+                          src={url}
+                          alt={`${selectedProject.title} ${i + 1}`}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    ))}
                   </div>
-                  {selectedProject.detailImageUrls && selectedProject.detailImageUrls[1] && (
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
-                      <img src={selectedProject.detailImageUrls[1]} alt={`${selectedProject.title} detail 2`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Row 3: My Role */}
-              {selectedProject.myRole && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                  <div>
-                    <h4 className="text-sm font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3">
-                      {language === 'ko' ? '내가 한 것' : 'My Role'}
-                    </h4>
-                    <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 font-light text-left break-keep whitespace-pre-wrap">
-                      {selectedProject.myRole}
-                    </p>
-                  </div>
-                  {selectedProject.detailImageUrls && selectedProject.detailImageUrls[2] && (
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
-                      <img src={selectedProject.detailImageUrls[2]} alt={`${selectedProject.title} detail 3`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Row 4: Contribution */}
-              {selectedProject.contribution && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                  <div>
-                    <h4 className="text-sm font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3">
-                      {language === 'ko' ? '기여도' : 'Contribution'}
-                    </h4>
-                    <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 font-light text-left break-keep whitespace-pre-wrap">
-                      {selectedProject.contribution}
-                    </p>
-                  </div>
-                  {selectedProject.detailImageUrls && selectedProject.detailImageUrls[3] && (
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
-                      <img src={selectedProject.detailImageUrls[3]} alt={`${selectedProject.title} detail 4`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Row 5: Results & Achievements */}
-              {selectedProject.results && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                  <div>
-                    <h4 className="text-sm font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3">
-                      {language === 'ko' ? '결과 / 성과' : 'Results & Achievements'}
-                    </h4>
-                    <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 font-light text-left break-keep whitespace-pre-wrap">
-                      {selectedProject.results}
-                    </p>
-                  </div>
-                  {selectedProject.detailImageUrls && selectedProject.detailImageUrls[4] && (
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-lg">
-                      <img src={selectedProject.detailImageUrls[4]} alt={`${selectedProject.title} detail 5`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Remaining Images */}
-              {selectedProject.detailImageUrls && selectedProject.detailImageUrls.length > 5 && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                  {selectedProject.detailImageUrls.slice(5).map((url, i) => (
-                    <div key={i + 5} className="w-full aspect-square overflow-hidden rounded-xl shadow-lg col-start-1 lg:col-start-2">
-                      <img src={url} alt={`${selectedProject.title} detail ${i + 6}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                    </div>
-                  ))}
                 </div>
               )}
             </div>

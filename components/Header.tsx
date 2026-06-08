@@ -12,7 +12,6 @@ const Header: React.FC = () => {
     { href: '#about', label: UI_TEXT[language].nav.about, id: 'about' },
     { href: '#education', label: UI_TEXT[language].nav.education, id: 'education' },
     { href: '#work-experience', label: UI_TEXT[language].nav.workExperience, id: 'work-experience' },
-    { href: '#personal-projects', label: UI_TEXT[language].nav.personalProjects, id: 'personal-projects' },
     { href: '#expertise', label: UI_TEXT[language].nav.expertise, id: 'expertise' },
     { href: '#certifications', label: UI_TEXT[language].nav.certifications, id: 'certifications' },
     { href: '#awards', label: UI_TEXT[language].nav.awards, id: 'awards' },

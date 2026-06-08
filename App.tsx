@@ -8,7 +8,6 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import LineDivider from './components/LineDivider';
 import Awards from './components/Awards';
-import PersonalProjects from './components/PersonalProjects';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 
@@ -26,10 +25,7 @@ const App: React.FC = () => {
           <LineDivider />
           <Education />
           <LineDivider />
-
           <Projects />
-          <LineDivider />
-          <PersonalProjects />
           <LineDivider />
           <Skills />
           <LineDivider />

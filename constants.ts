@@ -18,15 +18,17 @@ export const UI_TEXT = {
     },
     hero: {
       title: 'SoHee Jeong',
-      subtitleLeft: 'Turning vague AX into tangible experience.',
+      role: 'Internal Product · Tech Translator',
+      tags: ['Automation', 'AI Tools', 'Problem Solving'],
+      subtitleLeft: 'Problem Solver & Tech Translator',
       subtitleRight:
-        'AI · Automation Specialist based in Seoul. I translate technology into people-friendly language, and turn people’s problems into systems. Currently building internal AX and automation at Zigbang.',
+        'Creative thinking from art school, problem-solving skills from coding. I solve colleagues\' problems as an internal problem solver and tech translator.',
       scroll: 'SCROLL',
     },
     about: {
       title: 'About Me',
-      p1: 'I started in sculpture, learning to read space, form, and the way a viewer’s body moves through them. Through a data analysis certificate, a front-end bootcamp, and Apple Developer Academy, I gradually moved into building digital experiences — but kept the sculptor’s instincts: how does this *feel* to the person standing in front of it?',
-      p2: 'Today I work as Internal Product Ops at Zigbang, leading the company-wide AX (AI Transformation) initiative and building automation systems that quietly remove friction from people’s work. I believe the best automation is invisible, and the best technology is one your team forgets is technology at all.',
+      p1: 'I build automation and AI tools for non-developer colleagues at Zigbang\'s Internal Product team. I\'m a "friendly tech translator" — translating technology into human language, and turning people\'s problems into systems.',
+      p2: 'I planned and operated company-wide AX education achieving 82% completion, and built the internal automation request bot and RAG system with end-to-end ownership. Trained in sculpture at Hongik University asking "how does this work reach people" — that sense now drives my user-centered design.',
     },
     education: {
       title: 'Education',
@@ -68,15 +70,17 @@ export const UI_TEXT = {
     },
     hero: {
       title: '정소희',
-      subtitleLeft: '막연한 AX를 손에 잡히는 ‘경험’으로 만듭니다.',
+      role: 'Internal Product · Tech Translator',
+      tags: ['자동화', 'AI 도구', '문제 해결'],
+      subtitleLeft: '사내 문제 해결사 및 기술 번역가',
       subtitleRight:
-        '서울에서 활동하는 AI·Automation Specialist입니다. 기술을 사람의 언어로 번역하고, 사람의 문제를 시스템으로 풀어냅니다. 지금은 직방 Internal Product 팀에서 전사 AX 전환과 사내 자동화를 만들고 있습니다.',
+        '미술 대학에서 배운 창의적 사고 능력과, 코딩을 통해 배운 문제 해결 능력으로, 동료의 문제를 해결하는 사내 문제 해결사 및 기술 번역가.',
       scroll: 'SCROLL',
     },
     about: {
       title: 'About Me',
-      p1: '저는 홍익대학교에서 조소(彫塑)를 전공했습니다. 4년간 공간·형태·관람자의 동선을 다루며, “이 작업이 사람에게 어떻게 닿는가”를 묻는 훈련을 받았습니다. 졸업 후 데이터 분석 자격증(ADsP), 이노베이션 개발자 부트캠프(JS/React), 애플 디벨로퍼 아카데미 @POSTECH을 거치며 디지털 경험을 직접 만드는 영역으로 옮겨 왔습니다.',
-      p2: '지금은 직방 Internal Product 팀에서 전사 AX(AI Transformation) 전환과 사내 자동화 시스템을 만들고 있습니다. 비개발 직군 동료들이 AI를 막연한 것이 아니라 일상의 도구로 받아들이게 하는 일, 반복 업무 뒤에 숨은 비효율을 시스템으로 걷어내는 일을 합니다. 가장 좋은 자동화는 사용자가 그 존재를 의식하지 않는 자동화라고 믿습니다.',
+      p1: '직방 Internal Product 팀에서 비개발 동료를 위한 자동화·AI 도구를 만듭니다. 기술을 사람의 언어로 번역하고, 사람의 문제를 시스템으로 풀어내는 "친절한 기술 번역가"입니다.',
+      p2: '전사 AX 교육을 기획·운영하며 82% 수료율을 달성했고, 사내 자동화 요청 봇과 RAG 시스템을 기획부터 구현까지 오너십을 가지고 완성했습니다. 홍익대학교 조소과에서 "작업이 사람에게 어떻게 닿는가"를 훈련받았고, 이 감각이 지금의 사용자 중심 설계로 이어지고 있습니다.',
     },
     education: {
       title: 'Education',
@@ -116,9 +120,10 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  projectDescription?: string;
-  myRole?: string;
-  contribution?: string;
+  // STAR Framework
+  situation?: string;
+  task?: string;
+  action?: string;
   results?: string;
   detailImageUrls?: string[];
 }
@@ -127,135 +132,84 @@ export interface Project {
 const WORK_EXPERIENCE_EN: Project[] = [
   {
     id: 1,
-    year: '2025 – 2026',
-    category: 'Company-wide AX Transformation',
+    year: '2025.10 – 2026.07',
+    category: 'Company-wide AX · Education',
     title: 'Zigbang AX Transformation',
-    description:
-      'A 4-stage AX learning journey (Zapier → Slack → GAS → Claude) that reached 82% completion across the company.',
-    imageUrl: 'https://picsum.photos/seed/ax/800/600?grayscale',
-    projectDescription:
-      'A company-wide AI Transformation initiative at Zigbang, designed to make automation and LLM tools part of every employee’s daily workflow — from non-developers to engineers. I planned and operated a 4-stage curriculum (Zapier · Slack · Google Apps Script · Claude) and produced immersive communication content to lower the psychological barrier of adopting new tools.',
-    myRole:
-      'Internal Product Ops — I led the change management side: designing the learning roadmap, creating generative-AI webtoons to explain each tool in human language, and managing rollout across the company.',
-    contribution:
-      'Curriculum design, content production (AI-generated webtoons), facilitation, and outcome tracking.',
-    results:
-      '82% of all employees completed the full program. Qualitative feedback: “AI and automation used to feel abstract — the webtoons and step-by-step guides gave me the courage to actually try it in my own work.” Beyond the numbers, the project established a culture where employees voluntarily audit and improve their own workflows.',
-    detailImageUrls: [
-      'https://picsum.photos/seed/ax1/1200/800?grayscale',
-      'https://picsum.photos/seed/ax2/800/1000?grayscale',
-      'https://picsum.photos/seed/ax3/1000/600?grayscale',
-    ],
+    description: '82% completion rate. Taught Zapier & GAS tracks, created AI webtoon content.',
+    imageUrl: '/project1-1.png',
+    situation: 'Most Zigbang employees perceived AI and automation as "developer territory." High psychological barriers prevented non-developers from adopting these tools in their daily work.',
+    task: 'Design and operate an education program that lowers psychological barriers so non-developers can use AI and automation as everyday tools.',
+    action: '• Joined as planning & operations partner to HR Training Lead\n• Designed 4-stage roadmap: Zapier (No-code) → Slack → GAS (first code) → Claude (LLM)\n• Created curriculum and taught Zapier beginner/advanced and GAS tracks\n• Produced AI-generated webtoon content → drove initial engagement through relatability\n• Incorporated real automation cases discovered through non-developer collaboration into curriculum',
+    results: '• 82% company-wide completion rate (verified via measurement system)\n• "AI felt abstract before — now I have courage to apply it" — feedback\n• Established self-sustaining AX culture where employees audit and improve their own workflows\n• Trust built here led to ADS team automation request and internal bot system',
+    detailImageUrls: ['/project1-1.png', '/project1-2.png', '/project1-3.png'],
   },
   {
     id: 2,
-    year: '2026 – Present',
-    category: 'Internal System Design',
-    title: 'Zigbang Automation Request Bot',
-    description:
-      'An End-to-End Slack bot pipeline that standardized how teams request, approve, and ship internal automation.',
-    imageUrl: 'https://picsum.photos/seed/slackbot/800/600?grayscale',
-    projectDescription:
-      'Before this system, internal automation requests came in through email and DMs — no standard form, no manager approval, no record. I designed a Slack-based pipeline that handles the full lifecycle: request → manager approval → IP team review → development. Each approved request auto-creates a dedicated collaboration channel with the right people already invited.',
-    myRole:
-      'End-to-end design and implementation: process design, Slack Block Kit UX, serverless logic on AWS Lambda, and DynamoDB schema for request history.',
-    contribution:
-      'Process design · UX · Backend logic · Database schema · Rollout.',
-    results:
-      '12+ automation requests captured and tracked as structured data since March 2026, making internal bottlenecks visible for the first time. Lead time from request to kickoff dropped significantly thanks to auto-channel creation. Governance established: managers now approve before IP team touches anything.',
-    detailImageUrls: [
-      'https://picsum.photos/seed/bot1/1200/800?grayscale',
-      'https://picsum.photos/seed/bot2/800/1000?grayscale',
-      'https://picsum.photos/seed/bot3/1000/600?grayscale',
-    ],
+    year: '2026.02 – 2026.07',
+    category: 'Data Pipeline · Automation',
+    title: 'ADS Team Data Automation',
+    description: 'Notion API + GAS for per-client auto-classification. 0% human error, 10-second extraction.',
+    imageUrl: 'https://picsum.photos/seed/ads/800/600?grayscale',
+    situation: 'ADS team manually filtered and copy-pasted advertiser/client data from Notion DB to spreadsheets. Frequent human errors and delayed ad execution decisions.',
+    task: 'Received surface request "please move data automatically," but discovered through interviews the real problem was "per-client classification and data integrity." Needed to solve the root cause, not just sync.',
+    action: '• Interviewed ADS team to observe actual workflow, distinguished surface request vs real problem\n• Identified Zapier no-code branching limitations → chose GAS + Notion API direct integration\n• Designed and built per-client auto-classification + error handling + logging system\n• Error logs in sheets → non-developers can check "why it failed" directly\n• Handoff-ready system: comments in sheets, error messages in human language, editable areas marked',
+    results: '• 0% human error, ~10 second extraction, real-time sync\n• Data reliability restored → secured decision-making basis for ad execution\n• ADS team can modify/extend GAS code themselves thanks to documentation\n• Freed resources redirected to high-value work like ad efficiency analysis\n• Accumulation of informal requests led to internal bot project necessity',
+    detailImageUrls: [],
   },
   {
     id: 3,
-    year: '2026 – Present',
-    category: 'Data Pipeline Automation',
-    title: 'ADS Team — Notion-to-Sheets Pipeline',
-    description:
-      'A fully automated pipeline that extracts client-specific advertising data from Notion into formatted Google Sheets in under 10 seconds.',
-    imageUrl: 'https://picsum.photos/seed/ads/800/600?grayscale',
-    projectDescription:
-      'The ADS team manually filtered and copy-pasted client data from a large Notion database into shared spreadsheets — a process prone to human error and slow enough to delay ad-buying decisions. I designed an automated pipeline using the Notion API and Google Apps Script that pulls, cleans, and routes data to per-client sheets in real time.',
-    myRole:
-      'Pipeline design and implementation: Notion API integration, GAS-based transformation logic, scheduling, and error handling.',
-    contribution: 'Architecture · GAS development · Data validation logic · Operational handoff.',
-    results:
-      'Human error rate dropped to 0%. Extraction time per request reduced to ~10 seconds. The freed-up operational time was redirected to higher-value work like ad performance analysis and strategy.',
-    detailImageUrls: [
-      'https://picsum.photos/seed/ads1/1200/800?grayscale',
-      'https://picsum.photos/seed/ads2/800/1000?grayscale',
-      'https://picsum.photos/seed/ads3/1000/600?grayscale',
-    ],
+    year: '2026.03 – Present',
+    category: 'Internal System · LLM',
+    title: 'Automation Request Bot + RAG Bot',
+    description: 'Standardized workflow via Slack bot, knowledge capitalization via Claude API RAG.',
+    imageUrl: '/project3-1.png',
+    situation: 'Automation requests came through informal emails and DMs — no history tracking, no manager approval, no priority management. Requests disappeared when staff changed, and no data existed to answer "what work should be automated."',
+    task: 'Convert informal automation requests into standardized workflow, and turn accumulated collaboration data into searchable knowledge assets. Needed architecture where new AI features can extend without touching production systems.',
+    action: '• End-to-end design and implementation (AWS Lambda + DynamoDB + Slack Block Kit)\n• Automation Request Bot: Request → Manager approval → IP team review → auto-channel creation\n• RAG Knowledge Bot: Claude API integration, channel message-based internal knowledge search\n• Applied CQRS pattern: RAG bot read-only, IAM permission separation for operations/AI isolation\n• Human-in-the-Loop: LLM-extracted metadata saved only after verification modal\n• Legacy channel backfill (/rag-backfill): LLM extracts metadata → user verification → DB save',
+    results: '• Automation request bot live (3 collaboration channels created)\n• "Manager approval → IP team review" official governance established\n• Informal requests now structured data → internal bottlenecks visible for first time\n• RAG bot design complete, implementation in progress\n• Learned NoSQL schemaless characteristics, patterns for compensating LLM limitations with system structure',
+    detailImageUrls: ['/project3-1.png', '/project3-2.png', '/project3-3.png'],
   },
 ];
 
 const WORK_EXPERIENCE_KO: Project[] = [
   {
     id: 1,
-    year: '2025 – 2026',
-    category: '전사 AX 전환',
+    year: '2025.10 – 2026.07',
+    category: '전사 AX 전환 · 교육',
     title: '직방 전사 AX 전환 프로젝트',
-    description:
-      'Zapier · Slack · GAS · Claude로 이어지는 4단계 AX 로드맵을 기획·운영해 전체 구성원의 82% 수료를 달성한 프로젝트.',
-    imageUrl: 'https://picsum.photos/seed/ax/800/600?grayscale',
-    projectDescription:
-      '직방 전사 구성원이 AI와 자동화를 일상의 도구로 받아들이게 하는 것을 목표로 한 AX(AI Transformation) 전환 프로젝트입니다. 비개발 직군부터 개발자까지 모두 따라올 수 있도록 No-code 도구(Zapier)부터 LLM(Claude)까지 4단계 커리큘럼을 설계했고, 신규 툴에 대한 심리적 허들을 낮추기 위해 생성형 AI로 제작한 만화(Webtoon)를 홍보·교육 콘텐츠로 도입했습니다.',
-    myRole:
-      'Internal Product Ops 역할로 프로젝트의 변화 관리(Change Management) 측면을 리드했습니다. 4단계 커리큘럼 설계, 생성형 AI 만화 콘텐츠 기획·제작, 전사 롤아웃 운영, 성과 측정까지 담당했습니다.',
-    contribution: '커리큘럼 설계 · AI 만화 콘텐츠 기획·제작 · 전사 운영 · 성과 분석.',
-    results:
-      '전체 구성원의 82%가 프로젝트 전 과정을 수료. 정성적 피드백: “AI와 자동화가 막연히 어렵게 느껴졌는데, 만화와 단계별 가이드를 통해 실무에 바로 적용해 볼 용기가 생겼다.” 단순 교육을 넘어, 구성원 스스로 자신의 업무 파이프라인을 점검하고 개선하는 자생적 AX 문화가 자리잡았습니다.',
-    detailImageUrls: [
-      'https://picsum.photos/seed/ax1/1200/800?grayscale',
-      'https://picsum.photos/seed/ax2/800/1000?grayscale',
-      'https://picsum.photos/seed/ax3/1000/600?grayscale',
-    ],
+    description: '전사 구성원 82% 수료 달성. Zapier·GAS 트랙 직접 강의, AI 만화 콘텐츠로 초기 관심 견인.',
+    imageUrl: '/project1-1.png',
+    situation: '직방 전사 구성원 대부분이 AI와 자동화를 "개발자의 영역"으로 인식하고 있었습니다. 비개발 직군의 심리적 진입장벽이 높아 실무 도입이 어려운 상황이었습니다.',
+    task: '비개발 직군도 AI와 자동화를 일상 도구로 쓸 수 있도록, 심리적 장벽을 낮추는 교육 프로그램을 기획·운영해야 했습니다.',
+    action: '• 사내교육인사팀장의 기획·운영 파트너로 참여\n• 4단계 로드맵 설계: Zapier(No-code) → Slack → GAS(첫 코드) → Claude(LLM)\n• Zapier 초급/고급, GAS 트랙 교안 작성 및 직접 강의\n• 생성형 AI로 만화 콘텐츠 제작 → "나도 그렇지!" 공감 유도로 초기 관심 견인\n• 비개발 직군과 협업하며 발굴한 실제 자동화 케이스를 교안에 반영',
+    results: '• 전사 구성원 82% 수료율 달성 (측정 시스템으로 검증)\n• "AI가 막연했는데 실무에 적용할 용기가 생겼다" — 피드백\n• 구성원 스스로 업무 파이프라인을 점검·개선하는 자생적 AX 문화 조성\n• 이 프로젝트에서 형성된 신뢰가 ADS팀 자동화 의뢰, 사내 봇 시스템으로 확장',
+    detailImageUrls: ['/project1-1.png', '/project1-2.png', '/project1-3.png'],
   },
   {
     id: 2,
-    year: '2026 – 현재',
-    category: '사내 시스템 설계',
-    title: '직방 사내 자동화 요청 슬랙 봇',
-    description:
-      '비정형 자동화 요청을 표준화한 End-to-End 슬랙 봇 시스템. 요청 → 승인 → 검토 → 개발의 4단계 워크플로우를 자동화했습니다.',
-    imageUrl: 'https://picsum.photos/seed/slackbot/800/600?grayscale',
-    projectDescription:
-      '기존에는 자동화 요청이 이메일과 개인 DM으로 비공식적으로 들어와 히스토리 추적도, 부서장 승인도, 우선순위 관리도 불가능했습니다. 이를 해결하기 위해 슬랙 봇 기반으로 요청-승인-검토-개발의 전 과정을 시스템화했고, 승인 즉시 관련 인원이 자동 초대된 협업 채널이 생성되도록 설계했습니다.',
-    myRole:
-      'End-to-end로 직접 설계·구현했습니다. 운영 프로세스 설계, Slack Block Kit 기반 인터랙티브 UX, AWS Lambda Serverless 로직, DynamoDB 스키마 설계까지 담당했습니다.',
-    contribution:
-      '프로세스 설계 · Slack UX · AWS Lambda 로직 · DynamoDB 스키마 · 롤아웃.',
-    results:
-      '2026년 3월 이후 누적 12건 이상의 자동화 요청이 구조화된 데이터로 축적되어, 사내 업무 병목 구간이 처음으로 가시화되었습니다. 채널 자동 생성으로 초기 협의 리드타임이 크게 단축되었고, “팀장 승인 → IP팀 검토”라는 공식 거버넌스가 자리잡아 무분별한 요청이 사라졌습니다.',
-    detailImageUrls: [
-      'https://picsum.photos/seed/bot1/1200/800?grayscale',
-      'https://picsum.photos/seed/bot2/800/1000?grayscale',
-      'https://picsum.photos/seed/bot3/1000/600?grayscale',
-    ],
+    year: '2026.02 – 2026.07',
+    category: '데이터 파이프라인 · 자동화',
+    title: 'ADS팀 거래처 데이터 자동화',
+    description: 'Notion API + GAS로 거래처별 자동 분류. 휴먼 에러 0%, 추출 시간 10초.',
+    imageUrl: 'https://picsum.photos/seed/ads/800/600?grayscale',
+    situation: 'ADS팀(분양광고팀)은 노션 DB의 광고사·거래처 데이터를 매번 수동으로 필터링 후 복사·붙여넣기로 시트에 옮기고 있었습니다. 휴먼 에러가 빈번하고, 광고 집행 의사결정이 지연되는 상황이었습니다.',
+    task: '"데이터를 자동으로 옮겨주세요"라는 표면 요청을 받았지만, 인터뷰를 통해 진짜 문제가 "거래처별 분류와 정합성 유지"임을 발견했습니다. 단순 동기화가 아닌 근본 문제를 해결해야 했습니다.',
+    action: '• ADS팀 인터뷰로 실제 워크플로우 관찰, 표면 요청 vs 진짜 문제 구분\n• Zapier의 No-code 분기 한계 파악 → GAS + Notion API 직접 연동 결정\n• 거래처별 자동 분류 + 에러 핸들링 + 로그 시스템 설계·구현\n• 에러 로그를 시트에 기록 → 비개발자도 "왜 안 됐는지" 직접 확인 가능\n• 인계 가능한 시스템: 주석을 시트에, 에러 메시지를 사람의 언어로, 수정 가능 영역 명시',
+    results: '• 휴먼 에러 0%, 추출 시간 10초 내외, 실시간 동기화\n• 데이터 신뢰도 회복 → 광고 집행 의사결정 근거 확보\n• ADS팀이 직접 GAS 코드 수정·확장 가능하도록 문서화\n• 확보된 리소스를 광고 효율 분석·전략 수립 등 고부가가치 업무로 전환\n• 비공식 자동화 의뢰가 누적되며 사내 봇 프로젝트의 필요성 대두',
+    detailImageUrls: [],
   },
   {
     id: 3,
-    year: '2026 – 현재',
-    category: '데이터 파이프라인 자동화',
-    title: 'ADS팀 거래처 데이터 추출 자동화',
-    description:
-      '노션 DB의 거래처별 광고사 데이터를 구글 시트로 10초 안에 추출·정렬하는 자동화 파이프라인.',
-    imageUrl: 'https://picsum.photos/seed/ads/800/600?grayscale',
-    projectDescription:
-      'ADS팀은 노션에 보관된 방대한 거래처·광고사 데이터를 매번 수동으로 필터링·복사해 공유 시트로 옮기고 있었습니다. 휴먼 에러가 발생하기 쉽고, 광고 집행 의사결정을 지연시키는 원인이 되었습니다. 이를 해결하기 위해 Notion API와 Google Apps Script(GAS)를 연동한 자동 추출 파이프라인을 설계·구축했습니다.',
-    myRole:
-      'Notion API 호출 로직 설계, GAS 기반 데이터 전처리·분류 로직 구현, 스케줄링 설정, 에러 핸들링까지 직접 담당했습니다.',
-    contribution: '아키텍처 설계 · GAS 개발 · 데이터 정합성 검증 로직 · 운영 인수인계.',
-    results:
-      '휴먼 에러 0%로 데이터 정합성을 확보했고, 거래처별 데이터 추출 시간을 10초 내외로 단축했습니다. 확보된 리소스는 단순 추출 대신 광고 효율 분석·전략 수립 같은 고부가가치 업무로 재배치되었습니다.',
-    detailImageUrls: [
-      'https://picsum.photos/seed/ads1/1200/800?grayscale',
-      'https://picsum.photos/seed/ads2/800/1000?grayscale',
-      'https://picsum.photos/seed/ads3/1000/600?grayscale',
-    ],
+    year: '2026.03 – 현재',
+    category: '사내 시스템 · LLM',
+    title: '사내 자동화 요청 봇 + RAG 봇',
+    description: 'Slack 봇으로 워크플로우 표준화, Claude API 기반 RAG로 지식 자산화.',
+    imageUrl: '/project3-1.png',
+    situation: '자동화 요청이 이메일과 DM으로 비공식적으로 들어와 히스토리 추적, 부서장 승인, 우선순위 관리가 불가능했습니다. 담당자가 바뀌면 요청 이력이 사라지고, "어떤 업무가 자동화되어야 하는가"에 답할 데이터도 없었습니다.',
+    task: '비정형 자동화 요청을 표준화된 워크플로우로 전환하고, 축적된 협업 데이터를 검색 가능한 지식 자산으로 만들어야 했습니다. 운영 중인 시스템을 건드리지 않으면서 신규 AI 기능을 확장할 수 있는 구조가 필요했습니다.',
+    action: '• 전체 시스템 End-to-end 설계 및 구현 (AWS Lambda + DynamoDB + Slack Block Kit)\n• 자동화 요청 봇: 요청 → 부서장 승인 → IP팀 검토 → 협업 채널 자동 생성\n• RAG 지식 봇: Claude API 연동, 채널 메시지 기반 사내 지식 검색\n• CQRS 패턴 적용: RAG 봇은 읽기 전용, IAM 권한 분리로 운영/AI 시스템 격리\n• Human-in-the-Loop: LLM 추출 메타데이터는 검증 모달 거친 후 저장\n• 레거시 채널 백필(/rag-backfill) 설계: LLM이 메타데이터 추출 → 사용자 검증 → DB 저장',
+    results: '• 자동화 요청 봇 실 운영 중 (협업 채널 3건 생성)\n• "부서장 승인 → IP팀 검토" 공식 거버넌스 확립, 무분별한 요청 방지\n• 비정형 요청이 구조화된 데이터로 축적 → 사내 병목 구간 최초 가시화\n• RAG 봇 설계 완료, 구현 진행 중\n• NoSQL 스키마리스 특성, LLM 한계를 시스템으로 보완하는 패턴 체득',
+    detailImageUrls: ['/project3-1.png', '/project3-2.png', '/project3-3.png'],
   },
 ];
 
@@ -441,27 +395,25 @@ export const EDUCATION_DATA = {
   ko: EDUCATION_KO,
 };
 
-// ---------- Skills (AI/Automation Specialist 포지셔닝) ----------
+// ---------- Skills (노션 기반 재구성) ----------
 export const SKILLS_DATA: string[] = [
-  // AI / LLM
-  'Claude · LLM Prompting',
-  'Generative AI Content (Webtoon)',
-  // Automation
+  // AI · 자동화
+  'Claude API · RAG',
+  'Notion API · Google Apps Script',
+  'Slack API · Block Kit',
   'Zapier',
-  'Google Apps Script',
-  'AWS Lambda (Serverless)',
-  'Slack Web API & Block Kit',
-  // Data
-  'Notion API',
-  'Google Sheets API',
-  'Amazon DynamoDB',
-  'ADsP (Data Analysis)',
-  // Development
+  // 클라우드
+  'AWS Lambda',
+  'DynamoDB',
+  'API Gateway · IAM',
+  // 프로그래밍
+  'JavaScript',
+  'Swift · iOS',
   'React · TypeScript',
-  'SwiftUI · iOS',
-  // Creative & Soft
-  'Change Management',
-  'Visual Storytelling',
+  // 데이터 · 운영
+  'ADsP (데이터 분석)',
+  'ITSM 운영',
+  'Git · GitHub',
 ];
 
 // ---------- Social Links ----------

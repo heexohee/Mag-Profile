@@ -11,9 +11,26 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex flex-col justify-between -mx-4 sm:-mx-8 md:-mx-12 lg:-mx-24 bg-white dark:bg-black transition-colors duration-500 pt-32 pb-16 md:pb-24">
       {/* Title Section - Centered vertically in the upper part */}
       <div className="flex-grow flex items-center justify-center w-full px-6">
-        <h1 className="text-[12vw] sm:text-[11vw] font-medium tracking-tighter leading-none text-center">
-          <AnimatedText text={UI_TEXT[language].hero.title} />
-        </h1>
+        <div className="text-center">
+          {/* Role - Above name */}
+          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-neutral-400 dark:text-neutral-500 mb-4">
+            {UI_TEXT[language].hero.role}
+          </p>
+
+          {/* Name */}
+          <h1 className="text-[12vw] sm:text-[11vw] font-medium tracking-tighter leading-none">
+            <AnimatedText text={UI_TEXT[language].hero.title} />
+          </h1>
+
+          {/* Tags - Below name */}
+          <div className="flex justify-center gap-3 mt-6">
+            {UI_TEXT[language].hero.tags.map((tag: string, i: number) => (
+              <span key={i} className="text-xs md:text-sm px-3 py-1 border border-neutral-300 dark:border-neutral-700 rounded-full text-neutral-500 dark:text-neutral-400">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Description Section - Fixed at the bottom */}
