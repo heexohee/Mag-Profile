@@ -5,6 +5,73 @@ import type { Project } from '../constants';
 import ProjectCard from './ProjectCard';
 import { useLanguage } from './context/LanguageContext';
 
+// Helper function to render structured content with section headers
+const renderStructuredContent = (text: string, isDark: boolean = false) => {
+  const lines = text.split('\n');
+  const elements: React.ReactNode[] = [];
+
+  lines.forEach((line, index) => {
+    const trimmedLine = line.trim();
+
+    // Section header (■)
+    if (trimmedLine.startsWith('■')) {
+      elements.push(
+        <h5 key={index} className={`font-semibold mt-6 mb-3 text-sm md:text-base ${isDark ? 'text-neutral-200 dark:text-neutral-800' : 'text-neutral-800 dark:text-neutral-200'}`}>
+          {trimmedLine}
+        </h5>
+      );
+    }
+    // Sub-section or decision header (starts with number or Issue)
+    else if (/^(Issue \d+\.|[0-9]+\.)/.test(trimmedLine) || /^(Stage|Phase) \d+\./.test(trimmedLine)) {
+      elements.push(
+        <p key={index} className={`font-medium mt-4 mb-2 ${isDark ? 'text-neutral-300 dark:text-neutral-700' : 'text-neutral-700 dark:text-neutral-300'}`}>
+          {trimmedLine}
+        </p>
+      );
+    }
+    // Table-like content (starts with |)
+    else if (trimmedLine.startsWith('|')) {
+      elements.push(
+        <p key={index} className={`font-mono text-xs md:text-sm ${isDark ? 'text-neutral-400 dark:text-neutral-600' : 'text-neutral-500 dark:text-neutral-400'}`}>
+          {line}
+        </p>
+      );
+    }
+    // Bullet points or indented items
+    else if (trimmedLine.startsWith('•') || trimmedLine.startsWith('→') || trimmedLine.startsWith('└') || trimmedLine.startsWith('❌') || trimmedLine.startsWith('✓') || trimmedLine.startsWith('✗')) {
+      elements.push(
+        <p key={index} className={`ml-2 my-1 ${isDark ? 'text-neutral-300 dark:text-neutral-700' : 'text-neutral-600 dark:text-neutral-400'}`}>
+          {line}
+        </p>
+      );
+    }
+    // Labels like "Reason:", "Solution:", etc.
+    else if (/^(이유|결정|증상|영향|해결|배운 점|원인|문제의 본질|해결책|설계 포인트|아키텍처 원칙|설계 철학|핵심 인사이트|Reason|Decision|Symptom|Impact|Solution|Learning|Cause|Problem essence|Design point|Architecture principle|Design philosophy|Core insight):/.test(trimmedLine)) {
+      const [label, ...rest] = trimmedLine.split(':');
+      elements.push(
+        <p key={index} className={`my-2 ${isDark ? 'text-neutral-300 dark:text-neutral-700' : 'text-neutral-600 dark:text-neutral-400'}`}>
+          <span className={`font-semibold ${isDark ? 'text-neutral-200 dark:text-neutral-800' : 'text-neutral-700 dark:text-neutral-300'}`}>{label}:</span>
+          {rest.join(':')}
+        </p>
+      );
+    }
+    // Empty lines
+    else if (trimmedLine === '') {
+      elements.push(<div key={index} className="h-2" />);
+    }
+    // Regular text
+    else {
+      elements.push(
+        <p key={index} className={`my-1 ${isDark ? 'text-neutral-300 dark:text-neutral-700' : 'text-neutral-600 dark:text-neutral-400'}`}>
+          {line}
+        </p>
+      );
+    }
+  });
+
+  return <div className="space-y-0">{elements}</div>;
+};
+
 const Projects: React.FC = () => {
   const { language } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -67,52 +134,52 @@ const Projects: React.FC = () => {
                 {/* Situation */}
                 {selectedProject.situation && (
                   <div>
-                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-[10px] font-bold">S</span>
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-4 flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold">S</span>
                       {language === 'ko' ? '상황' : 'Situation'}
                     </h4>
-                    <p className="text-base md:text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 break-keep">
-                      {selectedProject.situation}
-                    </p>
+                    <div className="text-base md:text-lg leading-relaxed break-keep">
+                      {renderStructuredContent(selectedProject.situation)}
+                    </div>
                   </div>
                 )}
 
                 {/* Task */}
                 {selectedProject.task && (
                   <div>
-                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-[10px] font-bold">T</span>
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-4 flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold">T</span>
                       {language === 'ko' ? '과제' : 'Task'}
                     </h4>
-                    <p className="text-base md:text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 break-keep">
-                      {selectedProject.task}
-                    </p>
+                    <div className="text-base md:text-lg leading-relaxed break-keep">
+                      {renderStructuredContent(selectedProject.task)}
+                    </div>
                   </div>
                 )}
 
                 {/* Action */}
                 {selectedProject.action && (
                   <div>
-                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-3 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-[10px] font-bold">A</span>
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-500 mb-4 flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold">A</span>
                       {language === 'ko' ? '행동' : 'Action'}
                     </h4>
-                    <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-400 whitespace-pre-wrap break-keep">
-                      {selectedProject.action}
-                    </p>
+                    <div className="text-sm md:text-base leading-relaxed break-keep">
+                      {renderStructuredContent(selectedProject.action)}
+                    </div>
                   </div>
                 )}
 
                 {/* Results - Highlighted */}
                 {selectedProject.results && (
-                  <div className="p-6 bg-black dark:bg-white rounded-xl">
-                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-600 mb-3 flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-neutral-700 dark:bg-neutral-200 flex items-center justify-center text-[10px] font-bold text-white dark:text-black">R</span>
+                  <div className="p-6 md:p-8 bg-black dark:bg-white rounded-xl">
+                    <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-600 mb-4 flex items-center gap-2">
+                      <span className="w-7 h-7 rounded-full bg-neutral-700 dark:bg-neutral-200 flex items-center justify-center text-xs font-bold text-white dark:text-black">R</span>
                       {language === 'ko' ? '결과' : 'Results'}
                     </h4>
-                    <p className="text-base leading-relaxed text-white dark:text-black whitespace-pre-wrap break-keep">
-                      {selectedProject.results}
-                    </p>
+                    <div className="text-sm md:text-base leading-relaxed break-keep">
+                      {renderStructuredContent(selectedProject.results, true)}
+                    </div>
                   </div>
                 )}
               </div>
