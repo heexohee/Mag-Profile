@@ -10,7 +10,7 @@ export const UI_TEXT = {
     nav: {
       about: 'About',
       education: 'Education',
-      workExperience: 'Work',
+      workExperience: 'Works',
       personalProjects: 'Projects',
       expertise: 'Expertise',
       awards: 'Awards',
@@ -34,11 +34,12 @@ export const UI_TEXT = {
       title: 'Education',
     },
     workExperience: {
-      title: 'Work',
+      title: 'Works',
       period: '2025 – Present',
+      keywords: ['AX Transformation', 'Data Automation', 'Slack Bot', 'RAG', 'Non-Developer Collaboration', 'Tech Translator'],
     },
     projects: {
-      title: 'Work',
+      title: 'Works',
     },
     personalProjects: {
       title: 'Personal Projects',
@@ -62,7 +63,7 @@ export const UI_TEXT = {
     nav: {
       about: 'About',
       education: 'Education',
-      workExperience: 'Work',
+      workExperience: 'Works',
       personalProjects: 'Projects',
       expertise: 'Expertise',
       awards: 'Awards',
@@ -86,11 +87,12 @@ export const UI_TEXT = {
       title: 'Education',
     },
     workExperience: {
-      title: 'Work',
+      title: 'Works',
       period: '2025 – 현재',
+      keywords: ['AX 전환', '데이터 자동화', 'Slack 봇', 'RAG', '비개발 직군 협업', '기술 번역가'],
     },
     projects: {
-      title: 'Work',
+      title: 'Works',
     },
     personalProjects: {
       title: 'Personal Projects',
