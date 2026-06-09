@@ -203,7 +203,7 @@ const WORK_EXPERIENCE_EN: Project[] = [
     category: 'Company-wide AX · Education',
     title: 'Zigbang AX Transformation',
     description: '82% completion rate. Taught Zapier & GAS tracks, created AI webtoon content.',
-    imageUrl: '/프로젝트1이미지1.png',
+    imageUrl: '/project1-webtoon.png',
     situation: `Most Zigbang employees perceived AI and automation as "developer territory." The real barrier wasn't technical complexity—it was psychological distance. Non-developers had never experienced "I can automate this myself," making adoption nearly impossible.`,
     task: `Design and operate an education program where psychological barriers—not technical skills—are the primary target. The goal: make non-developers feel "I can do this too" before teaching any tools.`,
     action: `[Role: Planning Partner + Track Instructor + Content Creator]
@@ -526,7 +526,7 @@ const WORK_EXPERIENCE_KO: Project[] = [
     category: '전사 AX 전환 · 교육',
     title: '직방 전사 AX 전환 프로젝트',
     description: '전사 구성원 82% 수료 달성. Zapier·GAS 트랙 직접 강의, AI 만화 콘텐츠로 초기 관심 견인.',
-    imageUrl: '/프로젝트1이미지1.png',
+    imageUrl: '/project1-webtoon.png',
     situation: `직방 전사 구성원 대부분이 AI와 자동화를 "개발자의 영역"으로 인식하고 있었습니다. 진짜 장벽은 기술적 복잡성이 아니라 심리적 거리였습니다. 비개발자들은 "나도 이걸 자동화할 수 있다"는 경험을 한 번도 해본 적이 없어 도입이 거의 불가능한 상황이었습니다.`,
     task: `기술 스킬이 아닌 심리적 장벽을 주요 타깃으로 하는 교육 프로그램을 기획·운영해야 했습니다. 목표는 어떤 도구를 가르치기 전에 비개발자들이 "나도 할 수 있다"고 느끼게 만드는 것이었습니다.`,
     action: `[역할: 기획 파트너 + 트랙 강사 + 콘텐츠 제작]
