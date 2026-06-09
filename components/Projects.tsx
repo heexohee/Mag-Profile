@@ -89,29 +89,51 @@ const Projects: React.FC = () => {
     };
   }, [selectedProject]);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeModal();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
-    <section id="work-experience" className="py-20 md:py-32 relative">
-      <div className="flex justify-between items-end mb-12">
-        <h2 className="text-4xl sm:text-5xl font-medium tracking-tight border-b border-black dark:border-white pb-4 w-full md:w-auto">
-          {UI_TEXT[language].workExperience.title}
-        </h2>
-        <p className="text-neutral-500 dark:text-neutral-400 text-sm hidden sm:block">
-          {UI_TEXT[language].workExperience.period}
-        </p>
+    <section id="work-experience" className="py-20 md:py-32 relative scroll-mt-28">
+      <div className="grid md:grid-cols-12 gap-6 md:gap-8 items-end mb-12">
+        <div className="md:col-span-5">
+          <h2 className="text-4xl sm:text-5xl font-medium tracking-tight border-b border-black dark:border-white pb-4 w-full md:w-auto">
+            {UI_TEXT[language].workExperience.title}
+          </h2>
+        </div>
+        <div className="md:col-span-7 md:text-right">
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+            {UI_TEXT[language].workExperience.period}
+          </p>
+          <p className="mt-2 text-base md:text-lg text-neutral-700 dark:text-neutral-300 break-keep">
+            {UI_TEXT[language].projects.intro}
+          </p>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {WORK_EXPERIENCE_DATA[language].map((project) => (
-          <ProjectCard key={project.id} project={project} onClick={() => setSelectedProject(project)} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            openLabel={UI_TEXT[language].projects.openLabel}
+            onClick={() => setSelectedProject(project)}
+          />
         ))}
       </div>
 
       {selectedProject && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 md:p-8" onClick={closeModal}>
-          <div className="bg-white dark:bg-neutral-900 w-full max-w-7xl h-[95vh] rounded-2xl overflow-y-auto relative flex flex-col shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white dark:bg-neutral-900 w-full max-w-7xl h-[95vh] rounded-lg overflow-y-auto relative flex flex-col shadow-2xl" onClick={(e) => e.stopPropagation()}>
             <div className="sticky top-0 right-0 z-50 flex justify-end p-4 md:p-6 pointer-events-none w-full h-0">
-              <button 
-                className="pointer-events-auto w-12 h-12 flex items-center justify-center text-2xl text-black dark:text-white bg-white/80 dark:bg-black/80 backdrop-blur-md rounded-full shadow-sm transition-transform hover:scale-110"
+              <button
+                className="pointer-events-auto w-12 h-12 flex items-center justify-center text-2xl text-black dark:text-white bg-white/90 dark:bg-black/90 backdrop-blur-md rounded-full shadow-sm transition-transform hover:scale-110"
                 onClick={closeModal}
+                aria-label="Close"
               >
                 ✕
               </button>
@@ -127,20 +149,30 @@ const Projects: React.FC = () => {
             </div>
             
             <div className="p-8 md:p-16 lg:p-20 bg-white dark:bg-neutral-900">
-
-              {/* Keywords */}
-              {selectedProject.keywords && selectedProject.keywords.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-10">
-                  {selectedProject.keywords.map((keyword, index) => (
-                    <span
-                      key={index}
-                      className="text-xs md:text-sm px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full font-medium"
-                    >
-                      #{keyword}
-                    </span>
-                  ))}
+              <div className="grid md:grid-cols-12 gap-8 border-b border-neutral-200 dark:border-neutral-800 pb-10 mb-10">
+                <div className="md:col-span-4">
+                  <p className="text-xs uppercase text-neutral-400 dark:text-neutral-500 mb-2">
+                    {language === 'ko' ? '요약' : 'Summary'}
+                  </p>
+                  <p className="text-2xl md:text-3xl leading-tight font-medium text-black dark:text-white break-keep">
+                    {selectedProject.description}
+                  </p>
                 </div>
-              )}
+                <div className="md:col-span-8">
+                  {selectedProject.keywords && selectedProject.keywords.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.keywords.map((keyword, index) => (
+                        <span
+                          key={index}
+                          className="text-xs md:text-sm px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium"
+                        >
+                          #{keyword}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
 
               {/* STAR Framework */}
               <div className="space-y-10">
@@ -186,7 +218,7 @@ const Projects: React.FC = () => {
 
                 {/* Results - Highlighted */}
                 {selectedProject.results && (
-                  <div className="p-6 md:p-8 bg-black dark:bg-white rounded-xl">
+                  <div className="p-6 md:p-8 bg-black dark:bg-white rounded-lg">
                     <h4 className="text-xs font-semibold tracking-wider uppercase text-neutral-400 dark:text-neutral-600 mb-4 flex items-center gap-2">
                       <span className="w-7 h-7 rounded-full bg-neutral-700 dark:bg-neutral-200 flex items-center justify-center text-xs font-bold text-white dark:text-black">R</span>
                       {language === 'ko' ? '결과' : 'Results'}
@@ -206,7 +238,7 @@ const Projects: React.FC = () => {
                   </h4>
                   <div className="grid grid-cols-1 gap-4">
                     {selectedProject.detailImageUrls.map((url, i) => (
-                      <div key={i} className="w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800">
+                      <div key={i} className="w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-800">
                         <img
                           src={url}
                           alt={`${selectedProject.title} ${i + 1}`}
