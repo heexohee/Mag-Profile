@@ -24,11 +24,14 @@ export const UI_TEXT = {
       subtitleRight:
         'Creative thinking from art school, problem-solving skills from coding. I solve colleagues\' problems as an internal problem solver and tech translator.',
       scroll: 'SCROLL',
+      primaryCta: 'View Works',
+      secondaryCta: 'Contact',
     },
     about: {
       title: 'About Me',
       p1: 'I build automation and AI tools for non-developer colleagues at Zigbang\'s Internal Product team. I\'m a "friendly tech translator" — translating technology into human language, and turning people\'s problems into systems.',
       p2: 'I planned and operated company-wide AX education achieving 82% completion, and built the internal automation request bot and RAG system with end-to-end ownership. Trained in sculpture at Hongik University asking "how does this work reach people" — that sense now drives my user-centered design.',
+      proofTitle: 'What I connect',
     },
     education: {
       title: 'Education',
@@ -39,6 +42,8 @@ export const UI_TEXT = {
     },
     projects: {
       title: 'Works',
+      intro: 'Selected work across AX education, data automation, and internal AI systems.',
+      openLabel: 'Open case study',
     },
     personalProjects: {
       title: 'Personal Projects',
@@ -56,6 +61,7 @@ export const UI_TEXT = {
       title: 'Get in Touch',
       p1: 'Open to new opportunities, collaborations, and conversations about automation, AX, and the space where art meets technology.',
       email: 'Email me',
+      linksTitle: 'Find me on',
     },
   },
   ko: {
@@ -76,11 +82,14 @@ export const UI_TEXT = {
       subtitleRight:
         '미술 대학에서 배운 창의적 사고 능력과, 코딩을 통해 배운 문제 해결 능력으로, 동료의 문제를 해결하는 사내 문제 해결사 및 기술 번역가.',
       scroll: 'SCROLL',
+      primaryCta: '대표 작업 보기',
+      secondaryCta: '연락하기',
     },
     about: {
       title: 'About Me',
       p1: '직방 Internal Product 팀에서 비개발 동료를 위한 자동화·AI 도구를 만듭니다. 기술을 사람의 언어로 번역하고, 사람의 문제를 시스템으로 풀어내는 "친절한 기술 번역가"입니다.',
       p2: '전사 AX 교육을 기획·운영하며 82% 수료율을 달성했고, 사내 자동화 요청 봇과 RAG 시스템을 기획부터 구현까지 오너십을 가지고 완성했습니다. 홍익대학교 조소과에서 "작업이 사람에게 어떻게 닿는가"를 훈련받았고, 이 감각이 지금의 사용자 중심 설계로 이어지고 있습니다.',
+      proofTitle: '제가 연결하는 것',
     },
     education: {
       title: 'Education',
@@ -91,6 +100,8 @@ export const UI_TEXT = {
     },
     projects: {
       title: 'Works',
+      intro: 'AX 교육, 데이터 자동화, 사내 AI 시스템을 중심으로 한 대표 작업입니다.',
+      openLabel: '케이스 스터디 열기',
     },
     personalProjects: {
       title: 'Personal Projects',
@@ -108,9 +119,64 @@ export const UI_TEXT = {
       title: 'Get in Touch',
       p1: '새로운 기회, 협업, 그리고 자동화·AX·예술과 기술의 교차점에 대한 대화를 언제든 환영합니다.',
       email: 'Email me',
+      linksTitle: 'Find me on',
     },
   },
 };
+
+export interface HeroMetric {
+  value: string;
+  label: string;
+}
+
+export interface Capability {
+  title: string;
+  description: string;
+}
+
+export const HERO_METRICS = {
+  en: [
+    { value: '82%', label: 'AX education completion' },
+    { value: '0%', label: 'Manual transfer error after automation' },
+    { value: '3+', label: 'Internal bot channels standardized' },
+  ],
+  ko: [
+    { value: '82%', label: '전사 AX 교육 수료율' },
+    { value: '0%', label: '자동화 후 수동 이관 오류' },
+    { value: '3+', label: '표준화된 사내 봇 협업 채널' },
+  ],
+} satisfies Record<'en' | 'ko', HeroMetric[]>;
+
+export const CAPABILITIES = {
+  en: [
+    {
+      title: 'People to systems',
+      description: 'Turn vague team pain points into repeatable workflows and maintainable tools.',
+    },
+    {
+      title: 'No-code to code',
+      description: 'Choose Zapier, GAS, Lambda, or LLMs by matching tool limits to real work constraints.',
+    },
+    {
+      title: 'AI to operations',
+      description: 'Design AI features with governance, human review, and clear handoff paths.',
+    },
+  ],
+  ko: [
+    {
+      title: '사람의 문제를 시스템으로',
+      description: '막연한 업무 불편을 반복 가능한 워크플로우와 유지 가능한 도구로 바꿉니다.',
+    },
+    {
+      title: '노코드에서 코드까지',
+      description: 'Zapier, GAS, Lambda, LLM의 한계를 보고 실제 업무 조건에 맞는 도구를 고릅니다.',
+    },
+    {
+      title: 'AI를 운영 가능한 구조로',
+      description: '거버넌스, 사람 검증, 인계 가능성을 포함해 AI 기능을 설계합니다.',
+    },
+  ],
+} satisfies Record<'en' | 'ko', Capability[]>;
 
 // ---------- Types ----------
 export interface Project {
@@ -137,7 +203,7 @@ const WORK_EXPERIENCE_EN: Project[] = [
     category: 'Company-wide AX · Education',
     title: 'Zigbang AX Transformation',
     description: '82% completion rate. Taught Zapier & GAS tracks, created AI webtoon content.',
-    imageUrl: '/project1-1.png',
+    imageUrl: '/프로젝트1이미지1.png',
     situation: `Most Zigbang employees perceived AI and automation as "developer territory." The real barrier wasn't technical complexity—it was psychological distance. Non-developers had never experienced "I can automate this myself," making adoption nearly impossible.`,
     task: `Design and operate an education program where psychological barriers—not technical skills—are the primary target. The goal: make non-developers feel "I can do this too" before teaching any tools.`,
     action: `[Role: Planning Partner + Track Instructor + Content Creator]
@@ -460,7 +526,7 @@ const WORK_EXPERIENCE_KO: Project[] = [
     category: '전사 AX 전환 · 교육',
     title: '직방 전사 AX 전환 프로젝트',
     description: '전사 구성원 82% 수료 달성. Zapier·GAS 트랙 직접 강의, AI 만화 콘텐츠로 초기 관심 견인.',
-    imageUrl: '/project1-1.png',
+    imageUrl: '/프로젝트1이미지1.png',
     situation: `직방 전사 구성원 대부분이 AI와 자동화를 "개발자의 영역"으로 인식하고 있었습니다. 진짜 장벽은 기술적 복잡성이 아니라 심리적 거리였습니다. 비개발자들은 "나도 이걸 자동화할 수 있다"는 경험을 한 번도 해본 적이 없어 도입이 거의 불가능한 상황이었습니다.`,
     task: `기술 스킬이 아닌 심리적 장벽을 주요 타깃으로 하는 교육 프로그램을 기획·운영해야 했습니다. 목표는 어떤 도구를 가르치기 전에 비개발자들이 "나도 할 수 있다"고 느끼게 만드는 것이었습니다.`,
     action: `[역할: 기획 파트너 + 트랙 강사 + 콘텐츠 제작]
