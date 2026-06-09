@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="flex flex-col justify-end items-start md:items-end">
           <div className="space-y-4">
-            <h4 className="text-lg text-black dark:text-white font-semibold">Find me on</h4>
+            <h4 className="text-lg text-black dark:text-white font-semibold">{UI_TEXT[language].contact.linksTitle}</h4>
             <ul className="text-base space-y-2">
               <li><a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">LinkedIn</a></li>
               <li><a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">Instagram</a></li>

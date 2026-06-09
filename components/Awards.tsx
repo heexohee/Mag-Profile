@@ -5,7 +5,7 @@ import { useLanguage } from './context/LanguageContext';
 const Awards: React.FC = () => {
   const { language } = useLanguage();
   return (
-    <section id="awards" className="py-20 md:py-32">
+    <section id="awards" className="py-20 md:py-32 scroll-mt-28">
       <div className="grid md:grid-cols-12 gap-8">
         <div className="md:col-span-4">
           <h2 className="text-4xl sm:text-5xl font-medium tracking-tight border-b border-black dark:border-white pb-4 inline-block">

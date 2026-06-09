@@ -80,9 +80,9 @@ export const UI_TEXT = {
       tags: ['자동화', 'AI 도구', '문제 해결'],
       subtitleLeft: '사내 문제 해결사 및 기술 번역가',
       subtitleRight:
-        '미술 대학에서 배운 창의적 사고 능력과, 코딩을 통해 배운 문제 해결 능력으로, 동료의 문제를 해결하는 사내 문제 해결사 및 기술 번역가.',
+        '미술대학에서 배운 창의적 사고 능력과 컴퓨터 공학을 통해 기른 문제 해결 능력으로 동료의 문제를 해결하는 사내 문제 해결사 및 기술 번역가입니다.',
       scroll: 'SCROLL',
-      primaryCta: '대표 작업 보기',
+      primaryCta: '대표 프로젝트 보기',
       secondaryCta: '연락하기',
     },
     about: {
@@ -95,13 +95,13 @@ export const UI_TEXT = {
       title: 'Education',
     },
     workExperience: {
-      title: 'Works',
-      period: '2025 – 현재',
+      title: 'Works @Zigbang',
+      period: '2025.07 – 현재',
     },
     projects: {
       title: 'Works',
       intro: 'AX 교육, 데이터 자동화, 사내 AI 시스템을 중심으로 한 대표 작업입니다.',
-      openLabel: '케이스 스터디 열기',
+      openLabel: '열기',
     },
     personalProjects: {
       title: 'Personal Projects',
@@ -117,7 +117,7 @@ export const UI_TEXT = {
     },
     contact: {
       title: 'Get in Touch',
-      p1: '새로운 기회, 협업, 그리고 자동화·AX·예술과 기술의 교차점에 대한 대화를 언제든 환영합니다.',
+      p1: '새로운 기회, 협업, 그리고 자동화·AX·예술에 대한 대화를 언제든 환영합니다.',
       email: 'Email me',
       linksTitle: 'Find me on',
     },
@@ -137,13 +137,13 @@ export interface Capability {
 export const HERO_METRICS = {
   en: [
     { value: '82%', label: 'AX education completion' },
-    { value: '0%', label: 'Manual transfer error after automation' },
+    { value: '0%, 10Sec', label: 'Manual transfer error after automation' },
     { value: '3+', label: 'Internal bot channels standardized' },
   ],
   ko: [
-    { value: '82%', label: '전사 AX 교육 수료율' },
-    { value: '0%', label: '자동화 후 수동 이관 오류' },
-    { value: '3+', label: '표준화된 사내 봇 협업 채널' },
+    { value: '82%', label: '직방 전사 AX 교육 수료율' },
+    { value: '0% & 10초', label: '직방 분양광고팀 자동화 지원 - 오류율 & 처리 시간  ' },
+    { value: '3+', label: '사내 슬랙 RAG Bot - 자동화 요청 승인 인프라 확립 ' },
   ],
 } satisfies Record<'en' | 'ko', HeroMetric[]>;
 
