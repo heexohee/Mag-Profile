@@ -36,7 +36,6 @@ export const UI_TEXT = {
     workExperience: {
       title: 'Works',
       period: '2025 – Present',
-      keywords: ['AX Transformation', 'Data Automation', 'Slack Bot', 'RAG', 'Non-Developer Collaboration', 'Tech Translator'],
     },
     projects: {
       title: 'Works',
@@ -89,7 +88,6 @@ export const UI_TEXT = {
     workExperience: {
       title: 'Works',
       period: '2025 – 현재',
-      keywords: ['AX 전환', '데이터 자동화', 'Slack 봇', 'RAG', '비개발 직군 협업', '기술 번역가'],
     },
     projects: {
       title: 'Works',
@@ -128,6 +126,7 @@ export interface Project {
   action?: string;
   results?: string;
   detailImageUrls?: string[];
+  keywords?: string[];
 }
 
 // ---------- Work Experience (실제 직방 프로젝트 3종) ----------
@@ -192,6 +191,7 @@ The decisive difference from typical training: Instead of "here's a tool," it wa
 ■ Ripple Effect
 Trust built through this project led to ADS team automation requests and eventually the internal bot system.`,
     detailImageUrls: ['/project1-1.png', '/project1-2.png', '/project1-3.png'],
+    keywords: ['AX Transformation', 'Education Design', 'Zapier', 'Google Apps Script', 'Change Management', 'Tech Translator'],
   },
   {
     id: 2,
@@ -285,6 +285,7 @@ Most important in non-developer collaboration: "Will this system survive after I
 As informal automation requests accumulated, limitations of informal channels became apparent.
 → This problem recognition led to the next project: Internal Automation Bot + RAG System`,
     detailImageUrls: [],
+    keywords: ['Notion API', 'Google Apps Script', 'Data Pipeline', 'Non-Developer Collaboration', 'Interview-Driven', 'Handoff-Ready System'],
   },
   {
     id: 3,
@@ -448,6 +449,7 @@ Note: Operations period isn't long so absolute count is low, but the core value 
     Recommend suitable tools (Zapier/GAS/Lambda) + estimate effort
     LangGraph-based multi-step reasoning`,
     detailImageUrls: ['/project3-1.png', '/project3-2.png', '/project3-3.png'],
+    keywords: ['AWS Lambda', 'DynamoDB', 'Slack Bot', 'Claude API', 'RAG', 'CQRS', 'Human-in-the-Loop', 'Governance'],
   },
 ];
 
@@ -512,6 +514,7 @@ const WORK_EXPERIENCE_KO: Project[] = [
 ■ 확장 효과
 이 프로젝트에서 형성된 사내 신뢰가 ADS팀 자동화 의뢰, 나아가 사내 봇 시스템으로 이어졌습니다.`,
     detailImageUrls: ['/project1-1.png', '/project1-2.png', '/project1-3.png'],
+    keywords: ['AX 전환', '교육 설계', 'Zapier', 'Google Apps Script', '변화 관리', '기술 번역가'],
   },
   {
     id: 2,
@@ -605,6 +608,7 @@ Notion DB (원본) → GAS Trigger (스케줄 기반 Pull)
 이 프로젝트와 같은 자동화 의뢰가 사내에서 누적되며 비공식 채널의 한계가 드러났습니다.
 → 이 문제 인식이 다음 프로젝트인 사내 자동화 봇 + RAG 시스템으로 이어졌습니다.`,
     detailImageUrls: [],
+    keywords: ['Notion API', 'Google Apps Script', '데이터 파이프라인', '비개발 직군 협업', '인터뷰 기반', '인계 가능한 시스템'],
   },
   {
     id: 3,
@@ -769,6 +773,7 @@ RAG 지식 봇 (구현 진행 중):
     적합 도구(Zapier/GAS/Lambda) 추천 + 예상 공수 산정
     LangGraph 기반 다단계 추론`,
     detailImageUrls: ['/project3-1.png', '/project3-2.png', '/project3-3.png'],
+    keywords: ['AWS Lambda', 'DynamoDB', 'Slack 봇', 'Claude API', 'RAG', 'CQRS', 'Human-in-the-Loop', '거버넌스'],
   },
 ];
 

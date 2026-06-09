@@ -89,24 +89,8 @@ const Projects: React.FC = () => {
     };
   }, [selectedProject]);
 
-  const keywords = (UI_TEXT[language].workExperience as { keywords?: string[] }).keywords || [];
-
   return (
     <section id="work-experience" className="py-20 md:py-32 relative">
-      {/* Keywords */}
-      {keywords.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-8">
-          {keywords.map((keyword, index) => (
-            <span
-              key={index}
-              className="text-xs md:text-sm px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-full font-medium"
-            >
-              #{keyword}
-            </span>
-          ))}
-        </div>
-      )}
-
       <div className="flex justify-between items-end mb-12">
         <h2 className="text-4xl sm:text-5xl font-medium tracking-tight border-b border-black dark:border-white pb-4 w-full md:w-auto">
           {UI_TEXT[language].workExperience.title}
@@ -143,6 +127,20 @@ const Projects: React.FC = () => {
             </div>
             
             <div className="p-8 md:p-16 lg:p-20 bg-white dark:bg-neutral-900">
+
+              {/* Keywords */}
+              {selectedProject.keywords && selectedProject.keywords.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-10">
+                  {selectedProject.keywords.map((keyword, index) => (
+                    <span
+                      key={index}
+                      className="text-xs md:text-sm px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full font-medium"
+                    >
+                      #{keyword}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               {/* STAR Framework */}
               <div className="space-y-10">
