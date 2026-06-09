@@ -256,7 +256,7 @@ The decisive difference from typical training: Instead of "here's a tool," it wa
 
 ■ Ripple Effect
 Trust built through this project led to ADS team automation requests and eventually the internal bot system.`,
-    detailImageUrls: ['/project1-1.png', '/project1-2.png', '/project1-3.png'],
+    detailImageUrls: ['/project1-comic-email.png', '/project1-comic-files.png', '/project1-comic-collab.png', '/project1-comic-sales.png'],
     keywords: ['AX Transformation', 'Education Design', 'Zapier', 'Google Apps Script', 'Change Management', 'Tech Translator'],
   },
   {
@@ -579,7 +579,7 @@ const WORK_EXPERIENCE_KO: Project[] = [
 
 ■ 확장 효과
 이 프로젝트에서 형성된 사내 신뢰가 ADS팀 자동화 의뢰, 나아가 사내 봇 시스템으로 이어졌습니다.`,
-    detailImageUrls: ['/project1-1.png', '/project1-2.png', '/project1-3.png'],
+    detailImageUrls: ['/project1-comic-email.png', '/project1-comic-files.png', '/project1-comic-collab.png', '/project1-comic-sales.png'],
     keywords: ['AX 전환', '교육 설계', 'Zapier', 'Google Apps Script', '변화 관리', '기술 번역가'],
   },
   {
